@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    " DG",
+    "  G"
+  ],
+  "key": {
+    "G": [
+      "minecraft:gold_ingot"
+    ],
+    "D": [
+      "minecraft:diamond"
+    ]
+  },
+  "result": {
+    "id": "lmod:dust_enpowerer",
+    "count": 1
+  }
+}

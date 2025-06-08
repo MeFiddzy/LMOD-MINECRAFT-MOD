@@ -1,0 +1,19 @@
+{
+  "item.lmod.enpowered_gold_ingot": "Enpowered Gold Ingot",
+  "item.lmod.enpowerment_powder": "Enpowerment Powder",
+  "item.lmod.tough_powder": "Tough Powder",
+  "item.lmod.dust_enpowerer": "Dust Enpowerer",
+  "item.lmod.duracell": "Duracell",
+
+  "block.lmod.hard_stone": "Hard Stone",
+  "block.lmod.polished_hard_stone": "Polished Hard Stone",
+  "block.lmod.perma_empowerer": "Permanent Empowerer",
+
+  "creativetab.lmod.building_blocks": "Building Blocks",
+  "creativetab.lmod.technical_items": "Technical Items",
+
+  "tooltip.lmod.noshift": "Hold down§6 SHIFT KEY§f for more information.",
+  "tooltip.lmod.block.permanent_empower": "Right click the block while holding the tough dust \nitem to convert it into a powerful form.\nI wonder what happens if I step on this block...",
+  "tooltip.lmod.item.dust_empower": "Right click on an obsidian block \nat the height limit (y = 320) while holding some\ntough powder to convert it into a more powerful \nversion. You will sacrifice the obsidian though.",
+  "tooltip.lmod.item.duracell": "Will you take the risk of eating batteries?"
+}

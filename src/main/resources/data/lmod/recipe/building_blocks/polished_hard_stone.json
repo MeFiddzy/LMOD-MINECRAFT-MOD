@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "lmod:hard_stone"
+  },
+  "result": {
+    "id": "lmod:polished_hard_stone",
+    "count": 1
+  }
+}
