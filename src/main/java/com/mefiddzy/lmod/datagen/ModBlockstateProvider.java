@@ -1,0 +1,37 @@
+package com.mefiddzy.lmod.datagen;
+
+import com.mefiddzy.lmod.LMod;
+import com.mefiddzy.lmod.block.ModBlock;
+import net.minecraft.data.PackOutput;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
+
+public class ModBlockstateProvider extends BlockStateProvider {
+    public ModBlockstateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, LMod.MOD_ID, exFileHelper);
+    }
+
+    @Override
+    protected void registerStatesAndModels() {
+        blockWithItemAll(ModBlock.HARD_STONE);
+        blockWithItemTop(ModBlock.PERMA_EMPOWERER);
+        blockWithItemAll(ModBlock.POLISHED_HARD_STONE);
+    }
+
+    private void blockWithItemAll(DeferredBlock<?> db) {
+        simpleBlockWithItem(db.get(), cubeAll(db.get()));
+    }
+
+    private void blockWithItemTop(DeferredBlock<?> db) {
+        String name = db.getId().getPath();
+
+        simpleBlockWithItem(db.get(), models().cubeTop(
+                name,
+                modLoc("block/" + name + "_side"),  // side & bottom texture
+                modLoc("block/" + name + "_top")    // top texture
+        ));
+    }
+
+
+}

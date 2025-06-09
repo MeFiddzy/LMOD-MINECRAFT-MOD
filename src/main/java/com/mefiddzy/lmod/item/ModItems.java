@@ -5,10 +5,7 @@ import com.mefiddzy.lmod.item.custom.DustEnpowererItem;
 import com.mefiddzy.lmod.item.custom.FuelItem;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -30,6 +27,9 @@ public class ModItems {
     public static final DeferredItem<Item> DUST_EMPOWERER = ITEMS.register("dust_enpowerer",
             () -> new DustEnpowererItem(new Item.Properties().durability(150)));
 
+    public static final DeferredItem<Item> ENPOWERED_GOLD_STICK = ITEMS.register("enpowered_gold_stick",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> DURACELL = ITEMS.register("duracell",
             () -> new Item(new Item.Properties().food(ModFoodPropr.DURACELL)){
                 @Override
@@ -48,6 +48,36 @@ public class ModItems {
                     return UseAnim.DRINK;
                 }
             });
+
+    public static final DeferredItem<SwordItem> ENPOWERED_GOLD_SWORD = ITEMS.register("enpowered_gold_sword",
+            () -> new SwordItem(ModToolTiers.ENPOWERED_GOLD, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.ENPOWERED_GOLD, 4f, 5f))));
+    public static final DeferredItem<AxeItem> ENPOWERED_GOLD_AXE = ITEMS.register("enpowered_gold_axe",
+            () -> new AxeItem(ModToolTiers.ENPOWERED_GOLD, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.ENPOWERED_GOLD, 4.3f, 3f))));
+    public static final DeferredItem<PickaxeItem> ENPOWERED_GOLD_PICKAXE = ITEMS.register("enpowered_gold_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.ENPOWERED_GOLD, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.ENPOWERED_GOLD, 1.2f, 2f))));
+    public static final DeferredItem<ShovelItem> ENPOWERED_GOLD_SHOVEL = ITEMS.register("enpowered_gold_shovel",
+            () -> new ShovelItem(ModToolTiers.ENPOWERED_GOLD, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.ENPOWERED_GOLD, 0.5f, 6f))));
+    public static final DeferredItem<HoeItem> ENPOWERED_GOLD_HOE = ITEMS.register("enpowered_gold_hoe",
+            () -> new HoeItem(ModToolTiers.ENPOWERED_GOLD, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.ENPOWERED_GOLD, 0.1f, 10f))));
+
+    public static final DeferredItem<ArmorItem> ENPOWERED_GOLD_HELMET = ITEMS.register("enpowered_gold_helmet",
+            () -> new ArmorItem(ModArmorMateterial.ENPOWERED_GOLD_ARMOR_MAT, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40))));
+    public static final DeferredItem<ArmorItem> ENPOWERED_GOLD_CHESTPLATE = ITEMS.register("enpowered_gold_chestplate",
+            () -> new ArmorItem(ModArmorMateterial.ENPOWERED_GOLD_ARMOR_MAT, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
+    public static final DeferredItem<ArmorItem> ENPOWERED_GOLD_LEGGINGS = ITEMS.register("enpowered_gold_leggings",
+            () -> new ArmorItem(ModArmorMateterial.ENPOWERED_GOLD_ARMOR_MAT, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
+    public static final DeferredItem<ArmorItem> ENPOWERED_GOLD_BOOTS = ITEMS.register("enpowered_gold_boots",
+            () -> new ArmorItem(ModArmorMateterial.ENPOWERED_GOLD_ARMOR_MAT, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

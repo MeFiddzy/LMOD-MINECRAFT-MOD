@@ -1,0 +1,7 @@
+// 1.21.1	2025-06-09T12:55:07.4605563	Tags for minecraft:item mod id lmod
+85b747336af031057cbeb845680b01449985cba3 data/minecraft/tags/item/axes.json
+f786e89f447fb5c1756e40d877b842e9f9a53aa0 data/minecraft/tags/item/hoes.json
+e41ece392e1b78b1775c5f7d3ef08cb2c2e5c890 data/minecraft/tags/item/pickaxes.json
+77cca021a3d7897d0095cbef40121719aa4e16ec data/minecraft/tags/item/shovels.json
+f19cfe49b4f2294ac5ca05d6eba32115435e2a7a data/minecraft/tags/item/swords.json
+956905075e9cd0521012a4e669d1fddca89e5f18 data/minecraft/tags/item/trimmable_armor.json

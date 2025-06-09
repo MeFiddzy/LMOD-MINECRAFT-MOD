@@ -9,6 +9,7 @@ import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -25,10 +26,19 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        //loot_tables & recipes
         gen.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvidor::new, LootContextParamSets.BLOCK)), lookupProvider));
+                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        gen.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
 
-        gen.addProvider(event.includeClient(), new ModItemModelProvidor(packOutput, existingFileHelper));
-        gen.addProvider(event.includeClient(), new ModBlockstateProvidor(packOutput, existingFileHelper));
+        //tags
+        BlockTagsProvider bt = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
+        gen.addProvider(event.includeServer(), bt);
+        gen.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, bt.contentsGetter(), existingFileHelper));
+
+
+        //Models and BlockStates
+        gen.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        gen.addProvider(event.includeClient(), new ModBlockstateProvider(packOutput, existingFileHelper));
     }
 }

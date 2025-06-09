@@ -1,0 +1,10 @@
+// 1.21.1	2025-06-08T21:47:44.7553246	Block States: lmod
+a2c306b81489affc182d4a9245bd264a8b77a3d2 assets/lmod/blockstates/hard_stone.json
+39eca09b0ba647f741ac42d8418af9ca127646e5 assets/lmod/blockstates/perma_empowerer.json
+63718967d05e3604a4df9dc74823d4b296906c8b assets/lmod/blockstates/polished_hard_stone.json
+4f0cb36793e7686b55289fb29683925f92cea984 assets/lmod/models/block/hard_stone.json
+696da8acefec6d2dd89b0a5144ece30cf60a83c8 assets/lmod/models/block/perma_empowerer.json
+b252fcaf0188882c9be5c61171c9095c99c765dd assets/lmod/models/block/polished_hard_stone.json
+e182664dbcff5e3a1b15a7bee8c79c1826305fed assets/lmod/models/item/hard_stone.json
+878160155d3c531cbd1cf3386c5b14c3d8b8a7d7 assets/lmod/models/item/perma_empowerer.json
+6d956041b4328dcd1fa030f8fc30ec424c376a3e assets/lmod/models/item/polished_hard_stone.json

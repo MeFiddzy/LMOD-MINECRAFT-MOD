@@ -12,6 +12,9 @@ public class ModTags {
     public static class Blocks {
         //public static final TagKey<Block> TAG_NAME = createTag("tag_id");
 
+        public static final TagKey<Block> NEEDS_ENPOWERED_GOLD_TOOL = createTag("needs_enpowered_gold_tool");
+        public static final TagKey<Block> INCORRECT_FOR_ENPOWERED_GOLD_TOOL = createTag("incorrect_for_enpowered_gold_tool");
+
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, name));
         }

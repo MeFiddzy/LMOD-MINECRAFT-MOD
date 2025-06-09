@@ -23,6 +23,16 @@ public class ModCreaiveModTabs {
                 output.accept(ModItems.TOUGH_POWDER);
                 output.accept(ModItems.DUST_EMPOWERER);
                 output.accept(ModItems.DURACELL);
+                output.accept(ModItems.ENPOWERED_GOLD_SWORD);
+                output.accept(ModItems.ENPOWERED_GOLD_AXE);
+                output.accept(ModItems.ENPOWERED_GOLD_PICKAXE);
+                output.accept(ModItems.ENPOWERED_GOLD_SHOVEL);
+                output.accept(ModItems.ENPOWERED_GOLD_HOE);
+                output.accept(ModItems.ENPOWERED_GOLD_STICK);
+                output.accept(ModItems.ENPOWERED_GOLD_HELMET);
+                output.accept(ModItems.ENPOWERED_GOLD_BOOTS);
+                output.accept(ModItems.ENPOWERED_GOLD_CHESTPLATE);
+                output.accept(ModItems.ENPOWERED_GOLD_LEGGINGS);
 
                 output.accept(ModBlock.HARD_STONE);
                 output.accept(ModBlock.PERMA_EMPOWERER);
@@ -33,7 +43,7 @@ public class ModCreaiveModTabs {
             .icon(() -> new ItemStack(ModBlock.POLISHED_HARD_STONE.get()))
             .title(Component.translatable("creativetab.lmod.building_blocks"))
             .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModBlock.POLISHED_HARD_STONE);
+                output.accept(ModBlock.POLISHED_HARD_STONE.get());
             })
             .build());
 
