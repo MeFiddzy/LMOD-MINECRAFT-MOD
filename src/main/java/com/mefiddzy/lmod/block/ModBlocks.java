@@ -7,20 +7,18 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class ModBlock {
+public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(LMod.MOD_ID);
 
     public static final DeferredBlock<Block> HARD_STONE = regB("hard_stone",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(15f)
+                    .strength(14f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
 
@@ -29,6 +27,12 @@ public class ModBlock {
                     .strength(12.5f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
+
+    public static final DeferredBlock<Block> ENPOWERED_GOLD_BLOCK = regB("enpowered_gold_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(20f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
 
     public static final DeferredBlock<Block> PERMA_EMPOWERER = regB("perma_empowerer",
             () -> new PermanentEmpowererBlock(BlockBehaviour.Properties.of()

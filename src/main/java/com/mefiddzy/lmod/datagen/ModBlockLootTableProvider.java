@@ -1,6 +1,6 @@
 package com.mefiddzy.lmod.datagen;
 
-import com.mefiddzy.lmod.block.ModBlock;
+import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -40,13 +40,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlock.POLISHED_HARD_STONE.get());
-        add(ModBlock.HARD_STONE.get(),
-                block -> createMultipleOreDrop(ModBlock.HARD_STONE.get(), ModItems.TOUGH_POWDER.get(), 2.00f, 5.00f));
+        dropSelf(ModBlocks.POLISHED_HARD_STONE.get());
+        dropSelf(ModBlocks.ENPOWERED_GOLD_BLOCK.get());
+        add(ModBlocks.HARD_STONE.get(),
+                block -> createMultipleOreDrop(ModBlocks.HARD_STONE.get(), ModItems.TOUGH_POWDER.get(), 2.00f, 5.00f));
     }
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlock.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
 }

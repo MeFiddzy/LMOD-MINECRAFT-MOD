@@ -1,7 +1,7 @@
 package com.mefiddzy.lmod.datagen;
 
 import com.mefiddzy.lmod.LMod;
-import com.mefiddzy.lmod.block.ModBlock;
+import com.mefiddzy.lmod.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -14,9 +14,10 @@ public class ModBlockstateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItemAll(ModBlock.HARD_STONE);
-        blockWithItemTop(ModBlock.PERMA_EMPOWERER);
-        blockWithItemAll(ModBlock.POLISHED_HARD_STONE);
+        blockWithItemAll(ModBlocks.HARD_STONE);
+        blockWithItemTop(ModBlocks.PERMA_EMPOWERER);
+        blockWithItemAll(ModBlocks.POLISHED_HARD_STONE);
+        blockWithItemAll(ModBlocks.ENPOWERED_GOLD_BLOCK);
     }
 
     private void blockWithItemAll(DeferredBlock<?> db) {

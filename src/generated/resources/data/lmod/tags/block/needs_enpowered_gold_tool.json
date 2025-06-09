@@ -1,5 +1,6 @@
 {
   "values": [
+    "lmod:enpowered_gold_block",
     "#minecraft:needs_diamond_tool"
   ]
 }

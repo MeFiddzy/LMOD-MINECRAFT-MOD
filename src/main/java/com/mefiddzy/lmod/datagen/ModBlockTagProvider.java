@@ -1,7 +1,7 @@
 package com.mefiddzy.lmod.datagen;
 
 import com.mefiddzy.lmod.LMod;
-import com.mefiddzy.lmod.block.ModBlock;
+import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -21,17 +21,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         //Mineable
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlock.HARD_STONE.get())
-                .add(ModBlock.POLISHED_HARD_STONE.get());
+                .add(ModBlocks.HARD_STONE.get())
+                .add(ModBlocks.ENPOWERED_GOLD_BLOCK.get())
+                .add(ModBlocks.POLISHED_HARD_STONE.get());
 
         //Tool level
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlock.POLISHED_HARD_STONE.get());
+                .add(ModBlocks.POLISHED_HARD_STONE.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlock.HARD_STONE.get());
+                .add(ModBlocks.HARD_STONE.get());
 
         tag(ModTags.Blocks.NEEDS_ENPOWERED_GOLD_TOOL)
+                .add(ModBlocks.ENPOWERED_GOLD_BLOCK.get())
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(ModTags.Blocks.INCORRECT_FOR_ENPOWERED_GOLD_TOOL)

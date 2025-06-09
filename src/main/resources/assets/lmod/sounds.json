@@ -1,0 +1,17 @@
+{
+  "enpowerers_use" : {
+    "subtitle": "subtitle.sound.lmod.enpowerers_use",
+    "sounds": [
+      "lmod:enpowerers_use"
+    ]
+  },
+  "an_enigmatic_encounter" : {
+    "subtitle": "subtitle.song.lmod.an_enigmatic_encounter",
+    "sounds": [
+      {
+        "name": "lmod:an_enigmatic_encounter",
+        "stream": true
+      }
+    ]
+  }
+}

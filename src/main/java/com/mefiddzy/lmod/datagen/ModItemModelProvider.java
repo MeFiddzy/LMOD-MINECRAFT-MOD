@@ -87,6 +87,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DURACELL.get());
         basicItem(ModItems.DUST_EMPOWERER.get());
         basicItem(ModItems.ENPOWERED_GOLD_STICK.get());
+        basicItem(ModItems.AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC.get());
 
         handheldItem(ModItems.ENPOWERED_GOLD_PICKAXE.get());
         handheldItem(ModItems.ENPOWERED_GOLD_SHOVEL.get());

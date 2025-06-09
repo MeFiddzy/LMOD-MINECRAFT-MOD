@@ -1,7 +1,7 @@
 package com.mefiddzy.lmod.item;
 
 import com.mefiddzy.lmod.LMod;
-import com.mefiddzy.lmod.block.ModBlock;
+import com.mefiddzy.lmod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -34,16 +34,18 @@ public class ModCreaiveModTabs {
                 output.accept(ModItems.ENPOWERED_GOLD_CHESTPLATE);
                 output.accept(ModItems.ENPOWERED_GOLD_LEGGINGS);
 
-                output.accept(ModBlock.HARD_STONE);
-                output.accept(ModBlock.PERMA_EMPOWERER);
+                output.accept(ModBlocks.HARD_STONE);
+                output.accept(ModBlocks.PERMA_EMPOWERER);
+                output.accept(ModBlocks.ENPOWERED_GOLD_BLOCK);
             })
             .build());
 
     public static final Supplier<CreativeModeTab> BUILDING_BLOCKS = CREATIVE_MOD_TABS.register("building_blocks", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModBlock.POLISHED_HARD_STONE.get()))
+            .icon(() -> new ItemStack(ModBlocks.POLISHED_HARD_STONE.get()))
             .title(Component.translatable("creativetab.lmod.building_blocks"))
             .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModBlock.POLISHED_HARD_STONE.get());
+                output.accept(ModBlocks.POLISHED_HARD_STONE.get());
+                output.accept(ModItems.AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC);
             })
             .build());
 

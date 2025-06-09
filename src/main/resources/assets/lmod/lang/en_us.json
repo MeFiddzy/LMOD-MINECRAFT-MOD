@@ -14,10 +14,17 @@
   "item.lmod.enpowered_gold_chestplate": "Enpowered Gold Chestplate",
   "item.lmod.enpowered_gold_leggings": "Enpowered Gold Chestplate",
   "item.lmod.enpowered_gold_boots": "Enpowered Gold Boots",
+  "item.lmod.an_enigmatic_encounter_music_disc.desc": "Benjamin Crimson - An Enigmatic Encounter",
+  "item.lmod.an_enigmatic_encounter_music_disc": "An Enigmatic Encounter Music Disc",
+
+  "item.minecraft.potion.effect.potion_rez_potion": "Potion of Potion Resistance",
+  "item.minecraft.splash_potion.effect.potion_rez_potion": "Splash Potion of Potion Resistance",
+  "item.minecraft.lingering_potion.effect.potion_rez_potion": "Lingering Potion of Potion Resistance",
 
   "block.lmod.hard_stone": "Hard Stone",
   "block.lmod.polished_hard_stone": "Polished Hard Stone",
   "block.lmod.perma_empowerer": "Permanent Empowerer",
+  "block.lmod.enpowered_gold_block": "Block of Enpowered Gold",
 
   "creativetab.lmod.building_blocks": "LMod - Building Blocks",
   "creativetab.lmod.technical_items": "LMod - Technical Items",
@@ -25,5 +32,12 @@
   "tooltip.lmod.noshift": "Hold down§6 SHIFT KEY§f for more information.",
   "tooltip.lmod.block.permanent_empower": "Right click the block while holding the tough dust \nitem to convert it into a powerful form.\nI wonder what happens if I step on this block...",
   "tooltip.lmod.item.dust_empower": "Right click on an obsidian block \nat the height limit (y = 320) while holding some\ntough powder to convert it into a more powerful \nversion. \nNOTE: You will sacrifice the obsidian though.",
-  "tooltip.lmod.item.duracell": "Will you take the risk of eating batteries?"
+  "tooltip.lmod.item.duracell": "Will you take the risk of eating batteries?",
+  "tooltip.lmod.item.an_enigmatic_encounter": "My fav song <3",
+
+  "effect.lmod.potion_rez": "Magic Resistance",
+
+  "subtitle.sound.lmod.enpowerers_use": "Enpowerers converting tough powder...",
+
+  "subtitle.song.lmod.an_enigmatic_encounter": "An Enigmatic Encounter by Benjamin Crimson is playing right now..."
 }

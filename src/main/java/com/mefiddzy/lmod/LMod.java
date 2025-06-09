@@ -1,8 +1,11 @@
 package com.mefiddzy.lmod;
 
-import com.mefiddzy.lmod.block.ModBlock;
+import com.mefiddzy.lmod.block.ModBlocks;
+import com.mefiddzy.lmod.effect.ModEffects;
 import com.mefiddzy.lmod.item.ModCreaiveModTabs;
 import com.mefiddzy.lmod.item.ModItems;
+import com.mefiddzy.lmod.potion.ModPotions;
+import com.mefiddzy.lmod.sounds.ModSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,24 +33,24 @@ public class LMod
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public LMod(IEventBus modEventBus, ModContainer modContainer)
-    {
-        // Register the commonSetup method for modloading
+    public LMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
 
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
-        ModBlock.reg(modEventBus);
+        ModBlocks.reg(modEventBus);
         ModCreaiveModTabs.reg(modEventBus);
+        ModSounds.reg(modEventBus);
+        ModEffects.reg(modEventBus);
+        ModPotions.reg(modEventBus);
 
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
+
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
@@ -71,6 +74,5 @@ public class LMod
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        System.out.println("Buna Darius :)");
     }
 }

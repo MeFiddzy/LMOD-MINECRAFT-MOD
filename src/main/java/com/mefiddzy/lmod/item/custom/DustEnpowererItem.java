@@ -1,6 +1,7 @@
 package com.mefiddzy.lmod.item.custom;
 
 import com.mefiddzy.lmod.item.ModItems;
+import com.mefiddzy.lmod.sounds.ModSounds;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -25,7 +26,6 @@ public class DustEnpowererItem extends Item {
     public DustEnpowererItem(Properties properties) {
         super(properties);
     }
-
     @Override
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
@@ -41,7 +41,7 @@ public class DustEnpowererItem extends Item {
                 player.setItemInHand(InteractionHand.OFF_HAND, new ItemStack(ModItems.ENPOWERMENT_POWDER.get(), offhandStack.getCount()));
                 context.getItemInHand().hurtAndBreak(offhandStack.getCount(), ((ServerLevel) level), player, item -> player.onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
-                level.playSound(null, context.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+                level.playSound(null, context.getClickedPos(), ModSounds.ENPOWERERS_USE.get(), SoundSource.BLOCKS);
                 return InteractionResult.SUCCESS;
             }
         }
@@ -62,4 +62,6 @@ public class DustEnpowererItem extends Item {
 
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
+
+
 }
