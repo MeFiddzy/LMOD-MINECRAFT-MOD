@@ -2,6 +2,7 @@ package com.mefiddzy.lmod;
 
 import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.effect.ModEffects;
+import com.mefiddzy.lmod.enchantment.ModEnchantmentEffects;
 import com.mefiddzy.lmod.item.ModCreaiveModTabs;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
@@ -45,6 +46,7 @@ public class LMod
         ModSounds.reg(modEventBus);
         ModEffects.reg(modEventBus);
         ModPotions.reg(modEventBus);
+        ModEnchantmentEffects.reg(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

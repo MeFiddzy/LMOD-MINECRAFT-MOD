@@ -3,20 +3,25 @@ package com.mefiddzy.lmod.events;
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.effect.ModEffects;
+import com.mefiddzy.lmod.enchantment.ModEnchantments;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -44,6 +49,26 @@ public class ModEvents {
             }
         }
     }
+    /*
+    @SubscribeEvent
+    public static void guardianAngelDMGPrev(LivingDamageEvent.Pre e) {
+        if (e.getSource().getDirectEntity() instanceof Player p) {
+            int el = p.getMainHandItem().getEnchantmentLevel((Holder<Enchantment>) ModEnchantments.GUARDIAN_ANGEL);
+            if (el > 0) {
+                e.setNewDamage(0.0f);
+                LivingEntity living = e.getEntity();
+
+                living.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0));
+                if (el > 1) {
+                    living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 1));
+                }
+                if (el == 3) {
+                    living.addEffect(new MobEffectInstance(ModEffects.POTION_REZ_EFFECT, 100));
+                }
+            }
+        }
+    } */
+
 
     @SubscribeEvent
     public static void potionRez(LivingDamageEvent.Pre e) {
