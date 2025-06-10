@@ -33,6 +33,9 @@ import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
 
 @EventBusSubscriber(modid = LMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
+
+
+
     @SubscribeEvent
     public static void livingDmg(LivingDamageEvent.Pre e) {
         if (e.getEntity() instanceof Sheep s) {

@@ -40,7 +40,7 @@ public class PermanentEmpowererBlock extends Block {
             return ItemInteractionResult.FAIL;
         }
         if (hand == InteractionHand.OFF_HAND)
-            return ItemInteractionResult.SUCCESS;
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 
         if (stack.getItem() == ModItems.TOUGH_POWDER.get()) {
             player.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(ModItems.ENPOWERMENT_POWDER.get(), stack.getCount()));
@@ -76,14 +76,20 @@ public class PermanentEmpowererBlock extends Block {
             living.removeEffect(MobEffects.DAMAGE_RESISTANCE);
             living.removeEffect(MobEffects.FIRE_RESISTANCE);
             living.removeEffect(MobEffects.WATER_BREATHING);
+            living.removeEffect(MobEffects.SATURATION);
             l.playSound(null, pos, SoundEvents.WARDEN_DEATH, SoundSource.BLOCKS);
-            living.setHealth(1);
             if (living instanceof ServerPlayer p) {
+                living.setHealth(1);
                 p.getFoodData().setFoodLevel(0);
                 p.getFoodData().setSaturation(0.0f);
                 p.connection.disconnect(Component.literal(""));
             }
             else {
+                if (living.getHealth() <= 20) {
+                    living.setHealth(1);
+                }
+                else
+                    living.hurt(entity.level().damageSources().magic(), 20);
                 living.getBrain().clearMemories();
                 living.getBrain().removeAllBehaviors();
             }
