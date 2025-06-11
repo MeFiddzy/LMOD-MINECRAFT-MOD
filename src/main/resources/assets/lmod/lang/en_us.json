@@ -50,5 +50,7 @@
   "enchantment.lmod.life_leech": "Life Leech",
   "enchantment.lmod.ore_collector": "Ore Collector",
 
-  "trim_material.lmod.enpowred_gold": "Enpowered Gold Material"
+  "trim_material.lmod.enpowred_gold": "Enpowered Gold Material",
+
+  "entity.mccourse.giga_roach": "Giga Roach"
 }

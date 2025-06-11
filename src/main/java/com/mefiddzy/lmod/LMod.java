@@ -3,11 +3,14 @@ package com.mefiddzy.lmod;
 import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.effect.ModEffects;
 import com.mefiddzy.lmod.enchantment.ModEnchantmentEffects;
+import com.mefiddzy.lmod.entity.ModEntities;
+import com.mefiddzy.lmod.entity.client.GigaRoachRenderer;
 import com.mefiddzy.lmod.item.ModCreaiveModTabs;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
 import com.mefiddzy.lmod.sounds.ModSounds;
 import com.mefiddzy.lmod.util.ModItemProp;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -51,6 +54,7 @@ public class LMod
         ModEffects.reg(modEventBus);
         ModPotions.reg(modEventBus);
         ModEnchantmentEffects.reg(modEventBus);
+        ModEntities.reg(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -87,6 +91,9 @@ public class LMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent e) {
             ModItemProp.addCustomItemP();
+
+            EntityRenderers.register(ModEntities.GIGA_ROACH.get(), GigaRoachRenderer::new);
         }
+
     }
 }
