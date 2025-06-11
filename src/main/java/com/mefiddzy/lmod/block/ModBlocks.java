@@ -3,6 +3,7 @@ package com.mefiddzy.lmod.block;
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.custom.PermanentEmpowererBlock;
 import com.mefiddzy.lmod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -34,11 +35,37 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHERITE_BLOCK)));
 
+    public static final DeferredBlock<Block> ENPOWERMENT_POWDER_BLOCK = regB("enpowered_powder_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.GRASS)));
+
     public static final DeferredBlock<Block> PERMA_EMPOWERER = regB("perma_empowerer",
             () -> new PermanentEmpowererBlock(BlockBehaviour.Properties.of()
                     .strength(100f)
                     .noLootTable()
                     .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> PINK_DIAMOND_BLOCK = regB("pink_diamond_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> PINK_DIAMOND_ORE = regB("pink_diamond_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of()
+                    .strength(3f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> DEEPSLATE_PINK_DIAMOND_ORE = regB("deepslate_pink_diamond_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 7), BlockBehaviour.Properties.of()
+                    .strength(4.5f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.DEEPSLATE)));
+
 
 
     private static <T extends Block> DeferredBlock<T> regB(String name, Supplier<T> block) {

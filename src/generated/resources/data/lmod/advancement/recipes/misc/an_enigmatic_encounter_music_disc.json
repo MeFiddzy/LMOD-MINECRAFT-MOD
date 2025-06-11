@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "_has_music_disc_5": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:music_disc_5"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "lmod:an_enigmatic_encounter_music_disc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "_has_music_disc_5"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "lmod:an_enigmatic_encounter_music_disc"
+    ]
+  }
+}

@@ -7,6 +7,10 @@ import com.mefiddzy.lmod.item.ModCreaiveModTabs;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
 import com.mefiddzy.lmod.sounds.ModSounds;
+import com.mefiddzy.lmod.util.ModItemProp;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -76,5 +80,13 @@ public class LMod
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
+    }
+
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ModClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent e) {
+            ModItemProp.addCustomItemP();
+        }
     }
 }

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "lmod:nether_hard_stone_placed",
+  "step": "underground_ores"
+}

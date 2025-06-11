@@ -18,6 +18,10 @@ public class ModBlockstateProvider extends BlockStateProvider {
         blockWithItemTop(ModBlocks.PERMA_EMPOWERER);
         blockWithItemAll(ModBlocks.POLISHED_HARD_STONE);
         blockWithItemAll(ModBlocks.ENPOWERED_GOLD_BLOCK);
+        blockWithItemAll(ModBlocks.ENPOWERMENT_POWDER_BLOCK);
+        blockWithItemAll(ModBlocks.PINK_DIAMOND_ORE);
+        blockWithItemAll(ModBlocks.DEEPSLATE_PINK_DIAMOND_ORE);
+        blockWithItemAll(ModBlocks.PINK_DIAMOND_BLOCK);
     }
 
     private void blockWithItemAll(DeferredBlock<?> db) {

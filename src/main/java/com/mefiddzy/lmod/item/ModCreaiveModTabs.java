@@ -33,8 +33,13 @@ public class ModCreaiveModTabs {
                 output.accept(ModItems.ENPOWERED_GOLD_BOOTS);
                 output.accept(ModItems.ENPOWERED_GOLD_CHESTPLATE);
                 output.accept(ModItems.ENPOWERED_GOLD_LEGGINGS);
+                output.accept(ModItems.PINK_DIAMOND);
 
                 output.accept(ModBlocks.HARD_STONE);
+                output.accept(ModBlocks.PINK_DIAMOND_BLOCK);
+                output.accept(ModBlocks.PINK_DIAMOND_ORE);
+                output.accept(ModBlocks.DEEPSLATE_PINK_DIAMOND_ORE);
+                output.accept(ModBlocks.ENPOWERMENT_POWDER_BLOCK);
                 output.accept(ModBlocks.PERMA_EMPOWERER);
                 output.accept(ModBlocks.ENPOWERED_GOLD_BLOCK);
             })

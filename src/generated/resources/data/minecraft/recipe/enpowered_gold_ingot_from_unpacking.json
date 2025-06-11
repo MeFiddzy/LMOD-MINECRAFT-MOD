@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "lmod:enpowered_gold_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "lmod:enpowered_gold_ingot"
+  }
+}

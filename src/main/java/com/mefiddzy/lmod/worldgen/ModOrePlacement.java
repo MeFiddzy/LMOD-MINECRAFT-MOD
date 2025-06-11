@@ -1,4 +1,4 @@
-package com.mefiddzy.worldgen;
+package com.mefiddzy.lmod.worldgen;
 
 import net.minecraft.world.level.levelgen.placement.*;
 

@@ -1,7 +1,6 @@
-// 1.21.1	2025-06-09T22:52:38.0466705	Item Models: lmod
+// 1.21.1	2025-06-11T12:40:37.5106423	Item Models: lmod
 3855f4ca25b4a0f69cf25204240768376bafa613 assets/lmod/models/item/an_enigmatic_encounter_music_disc.json
 7eaba4394965a4dc83d959b2d54368b5fc9b46f3 assets/lmod/models/item/duracell.json
-f8a9a8e8ad7eed54ceb2b8c74696d1c422792730 assets/lmod/models/item/dust_enpowerer.json
 feb08e262df6637dde8e57558493e779563b595d assets/lmod/models/item/enpowered_gold_axe.json
 12883413ea084e6f5aefe4d56bec092b5b71c342 assets/lmod/models/item/enpowered_gold_boots.json
 765d52eda4b753cc5633ab9ee479aac5e00dabe4 assets/lmod/models/item/enpowered_gold_boots_amethyst_trim.json
@@ -54,4 +53,5 @@ b90ff506985229bb263ad894f334a6e91a1a2bf0 assets/lmod/models/item/enpowered_gold_
 2fcea81775ff8ba2829df90d9abb3c2bf2d2d07d assets/lmod/models/item/enpowered_gold_stick.json
 b931f5629a2a4823908011536cf02d0921568d92 assets/lmod/models/item/enpowered_gold_sword.json
 3b049115c47f40c384adf285d8f95ef231c6457e assets/lmod/models/item/enpowerment_powder.json
+3349077fce3b21b874a71114df37e943af92b7ea assets/lmod/models/item/pink_diamond.json
 fa30e76fb07c4dcf27f067c2e856a1cc0a2d8258 assets/lmod/models/item/tough_powder.json

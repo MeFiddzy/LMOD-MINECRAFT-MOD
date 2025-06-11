@@ -1,10 +1,12 @@
 package com.mefiddzy.lmod.datagen;
 
+import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
@@ -25,17 +27,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("  G")
                 .define('G', Items.GOLD_INGOT)
                 .define('D', Items.DIAMOND)
-                .unlockedBy("has_diamond", has(Items.DIAMOND))
-                .unlockedBy("has_gold", has(Items.GOLD_INGOT)).save(recipeOutput);
+                .unlockedBy("_has_diamond", has(Items.DIAMOND))
+                .unlockedBy("_has_gold", has(Items.GOLD_INGOT)).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PERMA_EMPOWERER.get())
                 .pattern("EEE")
                 .pattern("ENE")
                 .pattern("EEE")
-                .define('E', ModItems.ENPOWERMENT_POWDER)
+                .define('E', ModBlocks.ENPOWERMENT_POWDER_BLOCK)
                 .define('N', Items.NETHER_STAR)
-                .unlockedBy("has_enpower_powder", has(ModItems.ENPOWERMENT_POWDER))
-                .unlockedBy("has_nether_star", has(Items.NETHER_STAR)).save(recipeOutput);
+                .unlockedBy("_has_enpower_powder_block", has(ModBlocks.ENPOWERMENT_POWDER_BLOCK))
+                .unlockedBy("_has_nether_star", has(Items.NETHER_STAR)).save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_INGOT.get())
                 .requires(ModItems.ENPOWERMENT_POWDER)
@@ -46,7 +48,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.GOLD_INGOT)
                 .requires(Items.GOLD_INGOT)
                 .requires(Items.GOLD_INGOT)
-                .unlockedBy("has_enpower_powder", has(ModItems.ENPOWERMENT_POWDER)).save(recipeOutput);
+                .unlockedBy("_has_enpower_powder", has(ModItems.ENPOWERMENT_POWDER)).save(recipeOutput);
 
         oreSmelting(recipeOutput, List.of(Items.NETHERITE_INGOT), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 200, "duracell");
         oreBlasting(recipeOutput, List.of(Items.NETHERITE_INGOT), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 100, "duracell");
@@ -58,7 +60,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("  E")
                 .pattern("  E")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_PICKAXE.get())
@@ -67,7 +69,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
                 .define('S', ModItems.ENPOWERED_GOLD_STICK)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_AXE.get())
@@ -76,7 +78,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
                 .define('S', ModItems.ENPOWERED_GOLD_STICK)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_SWORD.get())
@@ -85,7 +87,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
                 .define('S', ModItems.ENPOWERED_GOLD_STICK)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_HOE.get())
@@ -94,7 +96,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
                 .define('S', ModItems.ENPOWERED_GOLD_STICK)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_SHOVEL.get())
@@ -103,7 +105,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
                 .define('S', ModItems.ENPOWERED_GOLD_STICK)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_HELMET.get())
@@ -111,7 +113,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("E E")
                 .pattern("   ")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_CHESTPLATE.get())
@@ -119,7 +121,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("EEE")
                 .pattern("EEE")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_LEGGINGS.get())
@@ -127,7 +129,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("E E")
                 .pattern("E E")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_BOOTS.get())
@@ -135,7 +137,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("E E")
                 .pattern("   ")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENPOWERED_GOLD_BLOCK.get())
@@ -143,12 +145,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("EEE")
                 .pattern("EEE")
                 .define('E', ModItems.ENPOWERED_GOLD_INGOT)
-                .unlockedBy("has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
+                .unlockedBy("_has_enpowered_gold_ingot", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_INGOT.get(), 9)
                 .requires(ModBlocks.ENPOWERED_GOLD_BLOCK)
-                .unlockedBy("has_enpowered_gold_block", has(ModBlocks.ENPOWERED_GOLD_BLOCK))
+                .unlockedBy("_has_enpowered_gold_block", has(ModBlocks.ENPOWERED_GOLD_BLOCK))
                 .save(recipeOutput, "enpowered_gold_ingot_from_unpacking");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC.get())
@@ -160,8 +162,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', Items.REDSTONE)
                 .define('P', Items.PHANTOM_MEMBRANE)
                 .define('D', Items.MUSIC_DISC_5)
-                .unlockedBy("has_music_disc_5", has(Items.MUSIC_DISC_5))
+                .unlockedBy("_has_music_disc_5", has(Items.MUSIC_DISC_5))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENPOWERMENT_POWDER_BLOCK.get())
+                .pattern("EEE")
+                .pattern("EEE")
+                .pattern("EEE")
+                .define('E', ModItems.ENPOWERMENT_POWDER)
+                .unlockedBy("_has_enpowerment_poweder", has(ModItems.ENPOWERMENT_POWDER))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENPOWERMENT_POWDER.get(), 9)
+                .requires(ModBlocks.ENPOWERMENT_POWDER_BLOCK)
+                .unlockedBy("_has_enpowerment_poweder_block", has(ModBlocks.ENPOWERMENT_POWDER_BLOCK))
+                .save(recipeOutput, "enpowerment_poweder_from_unpacking");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_DIAMOND_BLOCK.get())
+                .pattern("EEE")
+                .pattern("EEE")
+                .pattern("EEE")
+                .define('E', ModItems.PINK_DIAMOND)
+                .unlockedBy("_has_pink_diamond", has(ModItems.PINK_DIAMOND))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PINK_DIAMOND.get(), 9)
+                .requires(ModBlocks.PINK_DIAMOND_BLOCK)
+                .unlockedBy("_has_pink_diaond_block", has(ModBlocks.PINK_DIAMOND_BLOCK))
+                .save(recipeOutput, "pink_diamond_from_unpacking");
+
+        trimSmithing(recipeOutput, ModItems.ENPOWERED_GOLD_INGOT.get(), ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "enpowred_gold"));
     }
 
 }

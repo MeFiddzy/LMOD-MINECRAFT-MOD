@@ -2,10 +2,12 @@ package com.mefiddzy.lmod.datagen;
 
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.item.ModItems;
+import com.mefiddzy.lmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -19,9 +21,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        /*tag(TAG)
-        * .add()
-        * .add();*/
 
         tag(ItemTags.SWORDS)
                 .add(ModItems.ENPOWERED_GOLD_SWORD.get());
@@ -39,5 +38,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.ENPOWERED_GOLD_CHESTPLATE.get())
                 .add(ModItems.ENPOWERED_GOLD_LEGGINGS.get())
                 .add(ModItems.ENPOWERED_GOLD_BOOTS.get());
+        tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.ENPOWERED_GOLD_INGOT.get());
+
+        tag(ModTags.Items.POSSIBLE_FOR_ORE_COLLECTOR)
+                .add(Items.COAL)
+                .add(Items.GOLD_INGOT)
+                .add(Items.DIAMOND)
+                .add(Items.NETHERITE_SCRAP)
+                .add(Items.COPPER_INGOT)
+                .add(ModItems.PINK_DIAMOND.get())
+                .add(ModItems.TOUGH_POWDER.get())
+                .add(Items.IRON_INGOT);
     }
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "lmod:hard_stone",
+    "lmod:pink_diamond_ore",
+    "lmod:deepslate_pink_diamond_ore",
+    "lmod:pink_diamond_block",
     "lmod:enpowered_gold_block",
     "lmod:polished_hard_stone"
   ]

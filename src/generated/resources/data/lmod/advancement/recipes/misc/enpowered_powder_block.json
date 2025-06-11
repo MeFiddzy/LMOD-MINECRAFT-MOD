@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "_has_enpowerment_poweder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lmod:enpowerment_powder"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "lmod:enpowered_powder_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "_has_enpowerment_poweder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "lmod:enpowered_powder_block"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_enpower_powder": {
+    "_has_enpower_powder": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_enpower_powder"
+      "_has_enpower_powder"
     ]
   ],
   "rewards": {

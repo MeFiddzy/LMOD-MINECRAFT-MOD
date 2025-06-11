@@ -6,30 +6,39 @@ import com.mefiddzy.lmod.effect.ModEffects;
 import com.mefiddzy.lmod.enchantment.ModEnchantments;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
+import com.mefiddzy.lmod.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LightningBolt;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
+
+import java.util.List;
+import java.util.Map;
 
 @EventBusSubscriber(modid = LMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
@@ -52,25 +61,55 @@ public class ModEvents {
             }
         }
     }
-    /*
-    @SubscribeEvent
-    public static void guardianAngelDMGPrev(LivingDamageEvent.Pre e) {
-        if (e.getSource().getDirectEntity() instanceof Player p) {
-            int el = p.getMainHandItem().getEnchantmentLevel((Holder<Enchantment>) ModEnchantments.GUARDIAN_ANGEL);
-            if (el > 0) {
-                e.setNewDamage(0.0f);
-                LivingEntity living = e.getEntity();
 
-                living.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0));
-                if (el > 1) {
-                    living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 1));
-                }
-                if (el == 3) {
-                    living.addEffect(new MobEffectInstance(ModEffects.POTION_REZ_EFFECT, 100));
+    @SubscribeEvent
+    public static void oreCollectorFunc(BlockEvent.BreakEvent e) {
+        boolean haveench = false;
+        Player pl = e.getPlayer();
+        ItemStack item = pl.getMainHandItem();
+        if (e.getLevel().isClientSide())
+            return;
+
+        var server = pl.getServer();
+        if (server == null)
+            return;
+
+        var registry = server.registryAccess().registryOrThrow(Registries.ENCHANTMENT);
+        var holder = registry.getHolder(ModEnchantments.ORE_COLLECTOR).orElse(null);
+
+        int enchLv = 0;
+
+        if (holder != null) {
+            enchLv = EnchantmentHelper.getItemEnchantmentLevel(holder, item);
+            if (enchLv > 0) {
+                haveench = true;
+            }
+        }
+
+        BlockPos p = e.getPos();
+        Block block = e.getLevel().getBlockState(p).getBlock();
+
+        if ((block == Blocks.STONE || block == Blocks.DEEPSLATE) && haveench && !pl.isCreative()) {
+            int rand = (int)(Math.random() * (26 - (enchLv - 1) * 6));
+            if (enchLv >= 6)
+                rand = 0;
+            if (rand == 0) {
+                final List<Item> itemChances = BuiltInRegistries.ITEM
+                        .entrySet()
+                        .stream()
+                        .filter(entry -> entry.getValue().builtInRegistryHolder().is(ModTags.Items.POSSIBLE_FOR_ORE_COLLECTOR))
+                        .map(Map.Entry::getValue)
+                        .toList();
+
+                if (!itemChances.isEmpty()) {
+                    int itemIndex = (int)(Math.random() * itemChances.size());
+                    Item selectedItem = itemChances.get(itemIndex);
+                    ItemEntity ore = new ItemEntity((Level) e.getLevel(), p.getX(), p.getY(), p.getZ(), new ItemStack(selectedItem, 1));
+                    e.getLevel().addFreshEntity(ore);
                 }
             }
         }
-    } */
+    }
 
 
     @SubscribeEvent
@@ -81,6 +120,35 @@ public class ModEvents {
             }
         }
     }
+
+    @SubscribeEvent
+    public static void lifeLeachEnch(LivingDamageEvent.Pre e) {
+        if (e.getSource().getDirectEntity() instanceof Player pl) {
+            ItemStack item = pl.getMainHandItem();
+
+            if (e.getEntity().level().isClientSide)
+                return;
+
+            var server = pl.getServer();
+            if (server == null)
+                return;
+
+            var registry = server.registryAccess().registryOrThrow(Registries.ENCHANTMENT);
+            var holder = registry.getHolder(ModEnchantments.LIFE_LEECH).orElse(null);
+
+            if (holder != null) {
+                int enchLv = EnchantmentHelper.getItemEnchantmentLevel(holder, item);
+                if (enchLv > 0) {
+                    item.hurtAndBreak(enchLv / 2, pl, EquipmentSlot.MAINHAND);
+                    pl.heal((0.1f * enchLv) / 2 * e.getNewDamage());
+                }
+            }
+
+
+        }
+    }
+
+
 
 
 

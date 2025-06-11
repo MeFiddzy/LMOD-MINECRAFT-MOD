@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lmod:block/enpowered_gold_block"
+    }
+  }
+}

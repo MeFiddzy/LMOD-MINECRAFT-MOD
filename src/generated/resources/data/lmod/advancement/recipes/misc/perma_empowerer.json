@@ -1,17 +1,17 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_enpower_powder": {
+    "_has_enpower_powder_block": {
       "conditions": {
         "items": [
           {
-            "items": "lmod:enpowerment_powder"
+            "items": "lmod:enpowered_powder_block"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_nether_star": {
+    "_has_nether_star": {
       "conditions": {
         "items": [
           {
@@ -31,8 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_enpower_powder",
-      "has_nether_star"
+      "_has_enpower_powder_block",
+      "_has_nether_star"
     ]
   ],
   "rewards": {

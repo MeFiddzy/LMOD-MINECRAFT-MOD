@@ -1,5 +1,6 @@
 {
   "item.lmod.enpowered_gold_ingot": "Enpowered Gold Ingot",
+  "item.lmod.pink_diamond": "Pink Diamond",
   "item.lmod.enpowerment_powder": "Enpowerment Powder",
   "item.lmod.tough_powder": "Tough Powder",
   "item.lmod.dust_enpowerer": "Dust Enpowerer",
@@ -8,7 +9,7 @@
   "item.lmod.enpowered_gold_axe": "Enpowered Gold Axe",
   "item.lmod.enpowered_gold_pickaxe": "Enpowered Gold Pickaxe",
   "item.lmod.enpowered_gold_shovel": "Enpowered Gold Shovel",
-  "item.lmod.enpowered_gold_hoe": "Enpowered Gold Shovel",
+  "item.lmod.enpowered_gold_hoe": "Enpowered Gold Hoe",
   "item.lmod.enpowered_gold_stick": "Enpowered Gold Stick",
   "item.lmod.enpowered_gold_helmet": "Enpowered Gold Helmet",
   "item.lmod.enpowered_gold_chestplate": "Enpowered Gold Chestplate",
@@ -25,6 +26,10 @@
   "block.lmod.polished_hard_stone": "Polished Hard Stone",
   "block.lmod.perma_empowerer": "Permanent Empowerer",
   "block.lmod.enpowered_gold_block": "Block of Enpowered Gold",
+  "block.lmod.enpowered_powder_block": "Block of Enpowerment Powder",
+  "block.lmod.pink_diamond_block": "Block of Pink Diamond",
+  "block.lmod.pink_diamond_ore": "Pink Diamond Ore",
+  "block.lmod.deepslate_pink_diamond_ore": "Deepslate Pink Diamond Ore",
 
   "creativetab.lmod.building_blocks": "LMod - Building Blocks",
   "creativetab.lmod.technical_items": "LMod - Technical Items",
@@ -40,5 +45,10 @@
   "subtitle.sound.lmod.enpowerers_use": "Enpowerers converting tough powder...",
   "subtitle.song.lmod.an_enigmatic_encounter": "An Enigmatic Encounter by Benjamin Crimson is playing right now...",
 
-  "enchantment.lmod.guardian_angel": "Guardian Angel"
+  "enchantment.lmod.guardian_angel": "Guardian Angel",
+  "enchantment.lmod.disc_hunter": "Disc Hunter",
+  "enchantment.lmod.life_leech": "Life Leech",
+  "enchantment.lmod.ore_collector": "Ore Collector",
+
+  "trim_material.lmod.enpowred_gold": "Enpowered Gold Material"
 }

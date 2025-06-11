@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "lmod:guardian_angel"
+    "lmod:guardian_angel",
+    "lmod:disc_hunter",
+    "lmod:life_leech",
+    "lmod:ore_collector"
   ]
 }
