@@ -15,8 +15,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_ENPOWERED_GOLD_TOOL = createTag("needs_enpowered_gold_tool");
         public static final TagKey<Block> INCORRECT_FOR_ENPOWERED_GOLD_TOOL = createTag("incorrect_for_enpowered_gold_tool");
 
-        public static final TagKey<Block> NEEDS_PINK_DIAMOND_TOOL = createTag("needs_enpowered_gold_tool");
-        public static final TagKey<Block> INCORRECT_FOR_PINK_DIAMOND_TOOL = createTag("incorrect_for_enpowered_gold_tool");
+        public static final TagKey<Block> INCORRECT_FOR_KILLSTREAK = createTag("incorrect_for_killstreak");
 
         public static final TagKey<Block> ORE_COLLECTOR_DROP_BLOCKS = createTag("ore_collector_drop_blocks");
 

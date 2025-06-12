@@ -15,7 +15,7 @@ public class ModEntities {
 
     public static final Supplier<EntityType<GigaRoachEntity>> GIGA_ROACH = ENTITY_TYPES.register("giga_roach",
             () -> EntityType.Builder.of(GigaRoachEntity::new, MobCategory.CREATURE)
-                    .sized(0.75f, 0.35f).build("giga_roach"));
+                    .sized(0.55f, 0.05f).build("giga_roach"));
 
     public static void reg(IEventBus bus) {
         ENTITY_TYPES.register(bus);

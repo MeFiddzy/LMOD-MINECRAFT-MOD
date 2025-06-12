@@ -104,7 +104,7 @@ public class GigaRoachModel<T extends GigaRoachEntity> extends HierarchicalModel
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-        this.animateWalk(GigaRoachAnims.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+        this.animateWalk(GigaRoachAnims.WALK, limbSwing, limbSwingAmount, 10f, 2.5f);
         this.animate(entity.idleAnimS, GigaRoachAnims.IDLE, ageInTicks, 1f);
     }
 

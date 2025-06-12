@@ -34,6 +34,7 @@ public class ModCreaiveModTabs {
                 output.accept(ModItems.ENPOWERED_GOLD_CHESTPLATE);
                 output.accept(ModItems.ENPOWERED_GOLD_LEGGINGS);
                 output.accept(ModItems.PINK_DIAMOND);
+                output.accept(ModItems.KILLSTREAK_SWORD);
 
                 output.accept(ModBlocks.HARD_STONE);
                 output.accept(ModBlocks.PINK_DIAMOND_BLOCK);

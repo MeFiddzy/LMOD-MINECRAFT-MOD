@@ -1,8 +1,7 @@
-// 1.21.1	2025-06-11T21:27:24.8108791	Registries
+// 1.21.1	2025-06-12T15:44:40.1208119	Registries
 9aa33fc101dab238e75abc4b0c394bf3fb9b08f0 data/lmod/enchantment/disc_hunter.json
-4923caaed95ec1c0a5ae9711e4ffc1fe309cca49 data/lmod/enchantment/guardian_angel.json
+17036e958f8cf1f997a245d2e11aa7d3421755d2 data/lmod/enchantment/guardian_angel.json
 fd6838d8fe1c78139e723c2e5e4967b122029cc0 data/lmod/enchantment/life_leech.json
-0bbd23e1355de39b49655c6d91ee9af11d44c618 data/lmod/enchantment/ore_collector.json
 3ac5d88797c13d6319147aae4024e98b6cca5a0b data/lmod/neoforge/biome_modifier/add_hard_stone.json
 1142e4582bd4d99d350211cd8aaf5f2176ff0bb5 data/lmod/neoforge/biome_modifier/nether_add_hard_stone.json
 c9828c09cb1b8cb3a1d59297800c37a792e565b5 data/lmod/trim_material/enpowred_gold.json

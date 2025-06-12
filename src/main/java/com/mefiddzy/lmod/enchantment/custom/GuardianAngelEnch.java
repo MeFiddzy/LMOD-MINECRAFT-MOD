@@ -25,7 +25,7 @@ public record GuardianAngelEnch() implements EnchantmentEntityEffect {
             if (el == 3) {
                 living.addEffect(new MobEffectInstance(ModEffects.POTION_REZ_EFFECT, 400));
             }
-            ((LivingEntity) e).setHealth(20f);
+            living.setHealth(living.getMaxHealth());
         }
     }
 

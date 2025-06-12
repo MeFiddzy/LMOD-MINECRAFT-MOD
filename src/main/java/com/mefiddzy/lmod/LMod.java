@@ -10,6 +10,7 @@ import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
 import com.mefiddzy.lmod.sounds.ModSounds;
 import com.mefiddzy.lmod.util.ModItemProp;
+import com.mefiddzy.lmod.util.component.ModDataComp;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -55,6 +56,7 @@ public class LMod
         ModPotions.reg(modEventBus);
         ModEnchantmentEffects.reg(modEventBus);
         ModEntities.reg(modEventBus);
+        ModDataComp.reg(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

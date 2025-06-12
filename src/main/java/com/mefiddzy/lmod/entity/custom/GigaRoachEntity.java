@@ -47,6 +47,7 @@ public class GigaRoachEntity extends Animal {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 8d)
                 .add(Attributes.MOVEMENT_SPEED, 0.2d)
+                .add(Attributes.MOVEMENT_SPEED, 0.2d)
                 .add(Attributes.FOLLOW_RANGE, 24d);
     }
 

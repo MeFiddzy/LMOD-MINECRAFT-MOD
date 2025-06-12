@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-11T11:26:58.6787005	Recipes
+// 1.21.1	2025-06-12T19:41:53.6443341	Recipes
 4175c0ade1cddd4bd57aec3b886c3d260ebfcb45 data/lmod/advancement/recipes/misc/an_enigmatic_encounter_music_disc.json
 50be748990deb770ab5df9f0d4f7aef47c2f6222 data/lmod/advancement/recipes/misc/dust_enpowerer.json
 a1131b516efdb58e1395e6db88d204e75a221a58 data/lmod/advancement/recipes/misc/enpowered_gold_axe.json
@@ -15,6 +15,7 @@ fc2f256f974732f170548a12ff20751663c3353a data/lmod/advancement/recipes/misc/enpo
 c432afcd653e04d9dd02857cf26254f36cd79f09 data/lmod/advancement/recipes/misc/enpowered_gold_sword.json
 c5ce8ff5568ddb0207fd9e414f8bece06c55b306 data/lmod/advancement/recipes/misc/enpowered_powder_block.json
 203277ed5c97170457504f2ad83cfa00e433104c data/lmod/advancement/recipes/misc/enpowred_gold.json
+6f68e584aa55175559edc4bb05591df14ef99e7a data/lmod/advancement/recipes/misc/killstreak_sword.json
 69a9a81100305414cde9f2d4e0d3d9f30562e229 data/lmod/advancement/recipes/misc/perma_empowerer.json
 643b85de96ae5a975ac08837c9a9ae7c946af0e5 data/lmod/advancement/recipes/misc/pink_diamond_block.json
 13ea291602c73258195a652041c4ed6cf0ccebea data/lmod/recipe/an_enigmatic_encounter_music_disc.json
@@ -33,6 +34,7 @@ d3b4328efd08f4f46b15ddbafbc6326648f9475f data/lmod/recipe/enpowered_gold_shovel.
 bd74b6fcfc77c5ac648c5cf0b90e69e7dc61a432 data/lmod/recipe/enpowered_gold_sword.json
 38520cf541b7f787b0ff9440ebdaf43381c9eee4 data/lmod/recipe/enpowered_powder_block.json
 2a3421d99c753ee4931089fee70449a27b4f7c5f data/lmod/recipe/enpowred_gold.json
+bd7e3047582f155d999b87660b522fdde726f3ea data/lmod/recipe/killstreak_sword.json
 90f862a4c66b781a5fbe0a0c94625b791e2b5d1b data/lmod/recipe/perma_empowerer.json
 2b111da48f56e7fb3d777b1db729d93d8a71f9c2 data/lmod/recipe/pink_diamond_block.json
 a3f55ebbab5c72310c4d6d9c2df60dcfc107be8e data/minecraft/advancement/recipes/misc/duracell_from_blasting_netherite_ingot.json

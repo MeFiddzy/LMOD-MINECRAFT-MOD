@@ -4,7 +4,7 @@ import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.enchantment.custom.DiscHunterEnch;
 import com.mefiddzy.lmod.enchantment.custom.GuardianAngelEnch;
 import com.mefiddzy.lmod.enchantment.custom.LifeLeechEnch;
-import com.mefiddzy.lmod.enchantment.custom.OreCollectorEnch;
+import com.mefiddzy.lmod.enchantment.custom.EmptyEnchantment;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -26,7 +26,7 @@ public class ModEnchantmentEffects {
             () -> LifeLeechEnch.CODEC);
 
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> ORE_COLLECTOR = ENCHANTMENT_EFFECTS.register("ore_collector",
-            () -> OreCollectorEnch.CODEC);
+            () -> EmptyEnchantment.CODEC);
 
     public static void reg(IEventBus bus) {
         ENCHANTMENT_EFFECTS.register(bus);

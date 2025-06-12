@@ -192,6 +192,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, "pink_diamond_from_unpacking");
 
         trimSmithing(recipeOutput, ModItems.ENPOWERED_GOLD_INGOT.get(), ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "enpowred_gold"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.KILLSTREAK_SWORD.get(), 1)
+                .pattern(" B ")
+                .pattern(" B ")
+                .pattern(" S ")
+                .define('B', ModBlocks.PINK_DIAMOND_BLOCK)
+                .define('S', ModItems.ENPOWERED_GOLD_STICK)
+                .unlockedBy("_has_pink_diamond_block", has(ModBlocks.PINK_DIAMOND_BLOCK))
+                .unlockedBy("_has_enpowered_gold_stick", has(ModItems.ENPOWERED_GOLD_STICK))
+                .save(recipeOutput);
     }
 
 }

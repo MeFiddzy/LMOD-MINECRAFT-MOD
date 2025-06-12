@@ -7,9 +7,9 @@ import net.minecraft.world.item.enchantment.EnchantedItemInUse;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.phys.Vec3;
 
-public record OreCollectorEnch() implements EnchantmentEntityEffect {
+public record EmptyEnchantment() implements EnchantmentEntityEffect {
 
-    public static final MapCodec<OreCollectorEnch> CODEC = MapCodec.unit(OreCollectorEnch::new);
+    public static final MapCodec<EmptyEnchantment> CODEC = MapCodec.unit(EmptyEnchantment::new);
 
     @Override
     public void apply(ServerLevel level, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 origin) {

@@ -4,7 +4,7 @@ import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.enchantment.custom.DiscHunterEnch;
 import com.mefiddzy.lmod.enchantment.custom.GuardianAngelEnch;
 import com.mefiddzy.lmod.enchantment.custom.LifeLeechEnch;
-import com.mefiddzy.lmod.enchantment.custom.OreCollectorEnch;
+import com.mefiddzy.lmod.enchantment.custom.EmptyEnchantment;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -13,10 +13,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
-import net.minecraft.world.item.enchantment.EnchantmentTarget;
-import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.item.enchantment.effects.AddValue;
+import net.minecraft.world.item.enchantment.effects.SetValue;
 
 public class ModEnchantments {
     public static final ResourceKey<Enchantment> GUARDIAN_ANGEL = ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "guardian_angel"));
@@ -38,8 +39,13 @@ public class ModEnchantments {
                 EquipmentSlotGroup.MAINHAND
                 ))
                 .exclusiveWith(ench.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
-                .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
-                        EnchantmentTarget.VICTIM, new GuardianAngelEnch())
+                .withEffect(
+                EnchantmentEffectComponents.POST_ATTACK,
+                EnchantmentTarget.VICTIM,
+                EnchantmentTarget.ATTACKER,
+                new GuardianAngelEnch()
+            )
+
         );
 
         reg(c, DISC_HUNTER, Enchantment.enchantment(Enchantment.definition(
@@ -69,20 +75,6 @@ public class ModEnchantments {
                 .exclusiveWith(HolderSet.direct(ench.getOrThrow(GUARDIAN_ANGEL)))
                 .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                                 EnchantmentTarget.VICTIM, new LifeLeechEnch())
-        );
-
-        reg(c, ORE_COLLECTOR, Enchantment.enchantment(Enchantment.definition(
-                                it.getOrThrow(ItemTags.PICKAXES),
-                                1,
-                                2,
-                                Enchantment.dynamicCost(10, 27),
-                                Enchantment.dynamicCost(24, 27),
-                                5,
-                                EquipmentSlotGroup.MAINHAND
-                        ))
-                        .exclusiveWith(HolderSet.direct(ench.getOrThrow(Enchantments.FORTUNE)))
-                        .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
-                                EnchantmentTarget.VICTIM, new OreCollectorEnch())
         );
     }
 

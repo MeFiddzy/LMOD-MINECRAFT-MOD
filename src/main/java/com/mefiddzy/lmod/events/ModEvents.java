@@ -7,16 +7,18 @@ import com.mefiddzy.lmod.enchantment.ModEnchantments;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
 import com.mefiddzy.lmod.util.ModTags;
+import com.mefiddzy.lmod.util.component.ModDataComp;
+import com.mefiddzy.lmod.util.enums.KillstreakPhases;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -32,8 +34,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
 
@@ -47,7 +51,7 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void livingDmg(LivingDamageEvent.Pre e) {
-        if (e.getEntity() instanceof Sheep s) {
+        if (e.getEntity() instanceof Sheep) {
             if (e.getSource().getDirectEntity() instanceof Player pl) {
                 if (pl.getMainHandItem().getItem() == Items.END_ROD) {
                     pl.sendSystemMessage(Component.literal("EWWWWWWW! You just hit a sheep with an end rod!!!"));
@@ -56,7 +60,8 @@ public class ModEvents {
                     pl.addEffect(new MobEffectInstance(MobEffects.POISON, 600 * pl.getMainHandItem().getCount(), 2 * pl.getMainHandItem().getCount()));
                     pl.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 600 * pl.getMainHandItem().getCount(), 2 * pl.getMainHandItem().getCount()));
                     pl.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 600 * pl.getMainHandItem().getCount(), pl.getMainHandItem().getCount() - 1));
-                    pl.getMainHandItem().shrink(pl.getMainHandItem().getCount());
+                    if (!pl.isCreative())
+                        pl.getMainHandItem().shrink(pl.getMainHandItem().getCount());
                 }
             }
         }
@@ -111,6 +116,34 @@ public class ModEvents {
         }
     }
 
+    @SubscribeEvent
+    public static void killstreakSwordFunc(LivingDeathEvent e) {
+        Entity victim = e.getEntity();
+        if (e.getSource().getEntity() instanceof Player killer) {
+            ItemStack weapon = killer.getMainHandItem();
+            if (weapon.getItem() == ModItems.KILLSTREAK_SWORD.get()) {
+                int data;
+                if (weapon.get(ModDataComp.KILLS_WITH_ITEM) == null) {
+                    data = 0;
+                }
+                else {
+                    data = weapon.get(ModDataComp.KILLS_WITH_ITEM);
+                }
+                weapon.set(ModDataComp.KILLS_WITH_ITEM, data + 1);
+
+
+            }
+        }
+        if (victim instanceof Player plVictim) {
+            int invSize = plVictim.getInventory().getContainerSize();
+            for (int i = 0; i < invSize; i++) {
+                ItemStack cur = plVictim.getInventory().getItem(i);
+                if (cur.getItem() == ModItems.KILLSTREAK_SWORD.get()) {
+                    cur.set(ModDataComp.KILLS_WITH_ITEM, 0);
+                }
+            }
+        }
+    }
 
     @SubscribeEvent
     public static void potionRez(LivingDamageEvent.Pre e) {
@@ -140,7 +173,7 @@ public class ModEvents {
                 int enchLv = EnchantmentHelper.getItemEnchantmentLevel(holder, item);
                 if (enchLv > 0) {
                     item.hurtAndBreak(enchLv / 2, pl, EquipmentSlot.MAINHAND);
-                    pl.heal((0.1f * enchLv) / 2 * e.getNewDamage());
+                    pl.heal(0.1f * enchLv * e.getNewDamage());
                 }
             }
 
@@ -184,6 +217,19 @@ public class ModEvents {
         PotionBrewing.Builder b = e.getBuilder();
 
         b.addMix(Potions.MUNDANE, ModItems.ENPOWERED_GOLD_INGOT.get(), ModPotions.POTION_REZ_POTION);
+    }
+
+    @SubscribeEvent
+    public static void attrModKillstreak(ItemAttributeModifierEvent e) {
+        ItemStack stack = e.getItemStack();
+
+        if (stack.getItem() != ModItems.KILLSTREAK_SWORD.get())
+            return;
+
+        int kills = stack.getOrDefault(ModDataComp.KILLS_WITH_ITEM, 0);
+        KillstreakPhases curPhase = KillstreakPhases.getType(kills);
+
+        e.replaceModifier(Attributes.ATTACK_DAMAGE, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "killstreak_mod"), curPhase.getAttackDmg(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND);
     }
 }
 

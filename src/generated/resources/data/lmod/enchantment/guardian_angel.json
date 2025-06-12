@@ -6,11 +6,11 @@
   "effects": {
     "minecraft:post_attack": [
       {
-        "affected": "victim",
+        "affected": "attacker",
         "effect": {
           "type": "lmod:guardian_angel"
         },
-        "enchanted": "attacker"
+        "enchanted": "victim"
       }
     ]
   },

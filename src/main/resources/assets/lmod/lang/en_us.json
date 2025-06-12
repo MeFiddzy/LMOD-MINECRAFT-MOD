@@ -17,6 +17,7 @@
   "item.lmod.enpowered_gold_boots": "Enpowered Gold Boots",
   "item.lmod.an_enigmatic_encounter_music_disc.desc": "Benjamin Crimson - An Enigmatic Encounter",
   "item.lmod.an_enigmatic_encounter_music_disc": "An Enigmatic Encounter Music Disc",
+  "item.lmod.killstreak_sword": "Killstreak Sword",
 
   "item.minecraft.potion.effect.potion_rez_potion": "Potion of Potion Resistance",
   "item.minecraft.splash_potion.effect.potion_rez_potion": "Splash Potion of Potion Resistance",
@@ -39,6 +40,16 @@
   "tooltip.lmod.item.dust_empower": "Right click on an obsidian block \nat the height limit (y = 320) while holding some\ntough powder to convert it into a more powerful \nversion. \nNOTE: You will sacrifice the obsidian though.",
   "tooltip.lmod.item.duracell": "Will you take the risk of eating batteries?",
   "tooltip.lmod.item.an_enigmatic_encounter": "My fav song <3",
+  "tooltip.lmod.item.killstreak.phase1": "A§l Weak§r Peasant",
+  "tooltip.lmod.item.killstreak.phase2": "§9A Humble Beginning",
+  "tooltip.lmod.item.killstreak.phase3": "§4Bloodthirsty",
+  "tooltip.lmod.item.killstreak.phase4": "§6The Devourer of Worlds",
+  "tooltip.lmod.item.killstreak.phase5": "§4MUST K1LL",
+  "tooltip.lmod.item.killstreak.phase6": "§6G E N O C I D E",
+  "tooltip.lmod.item.killstreak.phase7": "§4NO ESCAPE AFTER THIS",
+  "tooltip.lmod.item.killstreak.phase8": "§6Expected me to KEEP the EVIL?",
+  "tooltip.lmod.item.killstreak.phase9": "§4What, CORUPTION? NOPE, DOOM, HATRED, DEATH",
+  "tooltip.lmod.item.killstreak.phase10": "§4The ENIGMATIC Level...",
 
   "effect.lmod.potion_rez": "Magic Resistance",
 
