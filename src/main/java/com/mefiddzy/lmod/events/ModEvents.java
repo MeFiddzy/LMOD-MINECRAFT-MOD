@@ -2,7 +2,7 @@ package com.mefiddzy.lmod.events;
 
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.ModBlocks;
-import com.mefiddzy.lmod.effect.ModEffects;
+import com.mefiddzy.lmod.effect.ModMobEffects;
 import com.mefiddzy.lmod.enchantment.ModEnchantments;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
@@ -147,7 +147,7 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void potionRez(LivingDamageEvent.Pre e) {
-        if (e.getEntity().hasEffect(ModEffects.POTION_REZ_EFFECT)) {
+        if (e.getEntity().hasEffect(ModMobEffects.POTION_REZ_EFFECT)) {
             if (e.getSource().is(Tags.DamageTypes.IS_MAGIC)) {
                 e.setNewDamage(0.0f);
             }

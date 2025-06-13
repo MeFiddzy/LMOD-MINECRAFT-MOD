@@ -19,30 +19,39 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> HARD_STONE_PLACED_KEY = regK("hard_stone_placed");
     public static final ResourceKey<PlacedFeature> NETHER_HARD_STONE_PLACED_KEY = regK("nether_hard_stone_placed");
 
+    public static final ResourceKey<PlacedFeature> PINK_DIAMOND_PLACED_KEY = regK("pink_diamond_key");
+
     public static void bs(BootstrapContext<PlacedFeature> c) {
         var cf = c.lookup(Registries.CONFIGURED_FEATURE);
-
-        // Overworld: Spawns in Deepslate layers (Y=-64 to Y=0), 6 veins per chunk
         reg(c, HARD_STONE_PLACED_KEY, cf.getOrThrow(ModConfigFeatures.HARD_STONE_KEY_OVERWORLD),
                 ModOrePlacement.commonOrePlacement(
-                        6, // 6 veins per chunk
+                        6, //veins per chunk
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(0)
                         )
                 )
         );
-
-        // Nether: Spawns in Netherrack (Y=10 to Y=100), 8 veins per chunk
         reg(c, NETHER_HARD_STONE_PLACED_KEY, cf.getOrThrow(ModConfigFeatures.HARD_STONE_KEY_NETHER),
                 ModOrePlacement.commonOrePlacement(
-                        8, // 8 veins per chunk
+                        8, //veins per chunk
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(10),
                                 VerticalAnchor.absolute(100)
                         )
                 )
         );
+
+        reg(c, PINK_DIAMOND_PLACED_KEY, cf.getOrThrow(ModConfigFeatures.PINK_DIAMOND_KEY_OVERWORLD),
+                ModOrePlacement.commonOrePlacement(
+                        4, //veins per chunk
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(-64),
+                                VerticalAnchor.absolute(20)
+                        )
+                )
+        );
+
     }
 
     private static ResourceKey<PlacedFeature> regK(String name) {

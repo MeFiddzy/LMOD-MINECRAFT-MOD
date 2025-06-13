@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -50,8 +51,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.GOLD_INGOT)
                 .unlockedBy("_has_enpower_powder", has(ModItems.ENPOWERMENT_POWDER)).save(recipeOutput);
 
-        oreSmelting(recipeOutput, List.of(Items.NETHERITE_INGOT), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 200, "duracell");
-        oreBlasting(recipeOutput, List.of(Items.NETHERITE_INGOT), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 100, "duracell");
+        oreSmelting(recipeOutput, List.of(Blocks.IRON_BLOCK), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 200, "duracell");
+        oreBlasting(recipeOutput, List.of(Blocks.IRON_BLOCK), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 100, "duracell");
 
         stonecutterResultFromBase(recipeOutput, RecipeCategory.MISC, ModBlocks.POLISHED_HARD_STONE,  ModBlocks.HARD_STONE);
 

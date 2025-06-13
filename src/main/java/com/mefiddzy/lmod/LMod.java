@@ -1,7 +1,7 @@
 package com.mefiddzy.lmod;
 
 import com.mefiddzy.lmod.block.ModBlocks;
-import com.mefiddzy.lmod.effect.ModEffects;
+import com.mefiddzy.lmod.effect.ModMobEffects;
 import com.mefiddzy.lmod.enchantment.ModEnchantmentEffects;
 import com.mefiddzy.lmod.entity.ModEntities;
 import com.mefiddzy.lmod.entity.client.GigaRoachRenderer;
@@ -52,7 +52,7 @@ public class LMod
         ModBlocks.reg(modEventBus);
         ModCreaiveModTabs.reg(modEventBus);
         ModSounds.reg(modEventBus);
-        ModEffects.reg(modEventBus);
+        ModMobEffects.reg(modEventBus);
         ModPotions.reg(modEventBus);
         ModEnchantmentEffects.reg(modEventBus);
         ModEntities.reg(modEventBus);

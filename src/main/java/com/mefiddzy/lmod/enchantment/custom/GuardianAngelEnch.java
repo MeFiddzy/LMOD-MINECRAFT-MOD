@@ -1,6 +1,6 @@
 package com.mefiddzy.lmod.enchantment.custom;
 
-import com.mefiddzy.lmod.effect.ModEffects;
+import com.mefiddzy.lmod.effect.ModMobEffects;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -23,7 +23,7 @@ public record GuardianAngelEnch() implements EnchantmentEntityEffect {
                 living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 1));
             }
             if (el == 3) {
-                living.addEffect(new MobEffectInstance(ModEffects.POTION_REZ_EFFECT, 400));
+                living.addEffect(new MobEffectInstance(ModMobEffects.POTION_REZ_EFFECT, 400));
             }
             living.setHealth(living.getMaxHealth());
         }

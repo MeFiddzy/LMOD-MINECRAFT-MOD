@@ -10,14 +10,23 @@ import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.ChatFormatting;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.util.component.ModDataComp;
 
-public class EditKillsKillstreakCommand {
-    public EditKillsKillstreakCommand(CommandDispatcher<CommandSourceStack> dispatcher) {
+public class LmodCommandTree {
+    public LmodCommandTree(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(
                 Commands.literal("lmod")
+                        .then(Commands.literal("qol")
+                                .then(Commands.literal("fullbright")
+                                        .then(Commands.argument("player", EntityArgument.player())
+                                                .executes(ctx -> {
+                                                    ServerPlayer target = EntityArgument.getPlayer(ctx, "player");
+                                                    return fullbright(ctx.getSource(), target);
+                                                }))))
                         .then(Commands.literal("killstreak")
                                 .then(Commands.argument("player", EntityArgument.player())
                                         .then(Commands.literal("set")
@@ -206,6 +215,11 @@ public class EditKillsKillstreakCommand {
         source.sendSuccess(() -> Component.literal(
                 "Set " + target.getName().getString() + "'s sword to phase " + allPhases[finalNumber].getPhaseNumber()
         ), true);
+        return 1;
+    }
+
+    private int fullbright(CommandSourceStack source, ServerPlayer target) {
+        target.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1, false, false));
         return 1;
     }
 
