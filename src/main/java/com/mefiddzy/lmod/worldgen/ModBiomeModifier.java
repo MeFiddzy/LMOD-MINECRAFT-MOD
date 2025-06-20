@@ -17,6 +17,8 @@ public class ModBiomeModifier {
     public static final ResourceKey<BiomeModifier> ADD_HARD_STONE = regK("add_hard_stone");
     public static final ResourceKey<BiomeModifier> NETHER_ADD_HARD_STONE = regK("nether_add_hard_stone");
 
+    public static final ResourceKey<BiomeModifier> ADD_PINK_DIAMOND = regK("add_pink_diamond");
+
     public static void bs(BootstrapContext<BiomeModifier> c) {
         var pf = c.lookup(Registries.PLACED_FEATURE);
         var b = c.lookup(Registries.BIOME);
@@ -31,6 +33,12 @@ public class ModBiomeModifier {
         c.register(NETHER_ADD_HARD_STONE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 b.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(pf.getOrThrow(ModPlacedFeatures.NETHER_HARD_STONE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+
+        c.register(ADD_PINK_DIAMOND, new BiomeModifiers.AddFeaturesBiomeModifier(
+                b.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(pf.getOrThrow(ModPlacedFeatures.PINK_DIAMOND_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
     }

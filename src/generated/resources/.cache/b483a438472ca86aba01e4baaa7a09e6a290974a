@@ -1,4 +1,5 @@
-// 1.21.1	2025-06-11T20:59:27.3392758	Tags for minecraft:item mod id lmod
+// 1.21.1	2025-06-20T19:45:33.8667783	Tags for minecraft:item mod id lmod
+0ce58fdd2ef7c19cd2e895abf2ef2c3478927fb0 data/lmod/tags/item/batteries.json
 d3941cf601a2ea33dfb44bd248bbbeac0f1f1ded data/lmod/tags/item/possible_for_ore_collector.json
 85b747336af031057cbeb845680b01449985cba3 data/minecraft/tags/item/axes.json
 f786e89f447fb5c1756e40d877b842e9f9a53aa0 data/minecraft/tags/item/hoes.json

@@ -1,9 +1,8 @@
 package com.mefiddzy.lmod.block.custom;
 
-import com.mefiddzy.lmod.effect.ModEffects;
+import com.mefiddzy.lmod.effect.ModMobEffects;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.sounds.ModSounds;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -25,7 +24,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
@@ -68,8 +66,8 @@ public class PermanentEmpowererBlock extends Block {
 
     private void noEffect(Entity entity, Level l, BlockPos pos) {
         entity.hurt(entity.level().damageSources().magic(), Float.MAX_VALUE);
-        if (entity instanceof LivingEntity living && living.hasEffect(ModEffects.POTION_REZ_EFFECT)) {
-            living.removeEffect(ModEffects.POTION_REZ_EFFECT);
+        if (entity instanceof LivingEntity living && living.hasEffect(ModMobEffects.POTION_REZ_EFFECT)) {
+            living.removeEffect(ModMobEffects.POTION_REZ_EFFECT);
             living.removeEffect(MobEffects.ABSORPTION);
             living.removeEffect(MobEffects.HEALTH_BOOST);
             living.removeEffect(MobEffects.REGENERATION);

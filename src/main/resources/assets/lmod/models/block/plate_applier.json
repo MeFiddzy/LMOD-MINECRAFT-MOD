@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "lmod:block/plate_applier/front",
+    "side": "lmod:block/plate_applier/side",
+    "top": "lmod:block/plate_applier/top"
+  }
+}

@@ -16,6 +16,7 @@ public class ModDataComp {
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> KILLS_WITH_ITEM = reg("kills_with_item",
             integerBuilder -> integerBuilder.persistent(Codec.INT));
 
+
     private static <T>DeferredHolder<DataComponentType<?>, DataComponentType<T>> reg(String name, UnaryOperator<DataComponentType.Builder<T>> builderOp) {
         return DATA_COMPONENT_TYPES.register(name, () -> builderOp.apply(DataComponentType.builder()).build());
     }

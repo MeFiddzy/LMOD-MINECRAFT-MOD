@@ -1,8 +1,10 @@
 package com.mefiddzy.lmod.item;
 
 import com.mefiddzy.lmod.LMod;
+import com.mefiddzy.lmod.item.custom.BatteryItem;
 import com.mefiddzy.lmod.item.custom.DustEnpowererItem;
 import com.mefiddzy.lmod.item.custom.FuelItem;
+import com.mefiddzy.lmod.item.custom.KillstreakSwordItem;
 import com.mefiddzy.lmod.sounds.ModSounds;
 import com.mefiddzy.lmod.util.component.ModDataComp;
 import com.mefiddzy.lmod.util.enums.KillstreakPhases;
@@ -36,6 +38,9 @@ public class ModItems {
     public static final DeferredItem<Item> ENPOWERED_GOLD_STICK = ITEMS.register("enpowered_gold_stick",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> ENPOWERED_GOLD_PLATE = ITEMS.register("enpowered_gold_plate",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC = ITEMS.register("an_enigmatic_encounter_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.AN_ENIGMATIC_ENCOUNTER_KEY).stacksTo(1)){
                 @Override
@@ -46,7 +51,7 @@ public class ModItems {
 
 
     public static final DeferredItem<Item> DURACELL = ITEMS.register("duracell",
-            () -> new Item(new Item.Properties().food(ModFoodPropr.DURACELL)){
+            () -> new BatteryItem(new Item.Properties().food(ModFoodPropr.DURACELL), 2){
                 @Override
                 public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     if (!Screen.hasShiftDown()) {
@@ -94,28 +99,9 @@ public class ModItems {
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
 
     public static final DeferredItem<SwordItem> KILLSTREAK_SWORD = ITEMS.register("killstreak_sword",
-            () -> new SwordItem(ModToolTiers.KILLSTREAK, new Item.Properties()
+            () -> new KillstreakSwordItem(ModToolTiers.KILLSTREAK, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.KILLSTREAK, 0f, -2f))){
-                @Override
-                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-                    int k = 0;
-                    if (stack.get(ModDataComp.KILLS_WITH_ITEM) != null) {
-                        k = stack.get(ModDataComp.KILLS_WITH_ITEM);
-                    }
-                    tooltipComponents.add(Component.literal("Kills: " + Math.min(k, KillstreakPhases.killstreakPhasesEnd)));
 
-                    if (k > KillstreakPhases.killstreakPhasesEnd) {
-                        tooltipComponents.add(Component.literal("§4§lOVERKILLS: " + (k - KillstreakPhases.killstreakPhasesEnd)));
-                    }
-
-                    int kills = stack.getOrDefault(ModDataComp.KILLS_WITH_ITEM, 0);
-                    KillstreakPhases curPhase = KillstreakPhases.getType(kills);
-
-                    tooltipComponents.add(Component.translatable("tooltip.lmod.item.killstreak.phase" + curPhase.getPhaseNumber()));
-
-
-                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-                }
             });
 
 

@@ -11,6 +11,16 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "_has_netherite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "lmod:enpowered_gold_ingot"
@@ -21,7 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "_has_enpower_powder"
+      "_has_enpower_powder",
+      "_has_netherite_ingot"
     ]
   ],
   "rewards": {

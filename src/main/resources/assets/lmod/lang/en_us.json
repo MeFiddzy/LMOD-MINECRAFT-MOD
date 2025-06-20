@@ -18,6 +18,7 @@
   "item.lmod.an_enigmatic_encounter_music_disc.desc": "Benjamin Crimson - An Enigmatic Encounter",
   "item.lmod.an_enigmatic_encounter_music_disc": "An Enigmatic Encounter Music Disc",
   "item.lmod.killstreak_sword": "Killstreak Sword",
+  "item.lmod.enpowered_gold_plate": "Enpowered Gold Plate",
 
   "item.minecraft.potion.effect.potion_rez_potion": "Potion of Potion Resistance",
   "item.minecraft.splash_potion.effect.potion_rez_potion": "Splash Potion of Potion Resistance",
@@ -31,6 +32,7 @@
   "block.lmod.pink_diamond_block": "Block of Pink Diamond",
   "block.lmod.pink_diamond_ore": "Pink Diamond Ore",
   "block.lmod.deepslate_pink_diamond_ore": "Deepslate Pink Diamond Ore",
+  "block.lmod.plate_applier": "Plate Applier",
 
   "creativetab.lmod.building_blocks": "LMod - Building Blocks",
   "creativetab.lmod.technical_items": "LMod - Technical Items",
@@ -49,7 +51,7 @@
   "tooltip.lmod.item.killstreak.phase7": "§4NO ESCAPE AFTER THIS",
   "tooltip.lmod.item.killstreak.phase8": "§6Expected me to KEEP the EVIL?",
   "tooltip.lmod.item.killstreak.phase9": "§4What, CORUPTION? NOPE, DOOM, HATRED, DEATH",
-  "tooltip.lmod.item.killstreak.phase10": "§4The ENIGMATIC Level...",
+  "tooltip.lmod.item.killstreak.phase10": "§4The ENIGMATIC Phase...",
 
   "effect.lmod.potion_rez": "Magic Resistance",
 

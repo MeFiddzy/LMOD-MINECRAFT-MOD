@@ -2,6 +2,7 @@ package com.mefiddzy.lmod.block;
 
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.custom.PermanentEmpowererBlock;
+import com.mefiddzy.lmod.block.custom.PlateApplierBlock;
 import com.mefiddzy.lmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -66,6 +67,12 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
 
+    public static final DeferredBlock<Block> PLATE_APPLIER = regB("plate_applier",
+            () -> new PlateApplierBlock(BlockBehaviour.Properties.of()
+                    .strength(4.5f)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()
+                    .sound(SoundType.STONE)));
 
 
     private static <T extends Block> DeferredBlock<T> regB(String name, Supplier<T> block) {

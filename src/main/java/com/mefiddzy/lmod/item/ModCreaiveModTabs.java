@@ -35,6 +35,7 @@ public class ModCreaiveModTabs {
                 output.accept(ModItems.ENPOWERED_GOLD_LEGGINGS);
                 output.accept(ModItems.PINK_DIAMOND);
                 output.accept(ModItems.KILLSTREAK_SWORD);
+                output.accept(ModItems.ENPOWERED_GOLD_PLATE);
 
                 output.accept(ModBlocks.HARD_STONE);
                 output.accept(ModBlocks.PINK_DIAMOND_BLOCK);
@@ -43,6 +44,7 @@ public class ModCreaiveModTabs {
                 output.accept(ModBlocks.ENPOWERMENT_POWDER_BLOCK);
                 output.accept(ModBlocks.PERMA_EMPOWERER);
                 output.accept(ModBlocks.ENPOWERED_GOLD_BLOCK);
+                output.accept(ModBlocks.PLATE_APPLIER);
             })
             .build());
 

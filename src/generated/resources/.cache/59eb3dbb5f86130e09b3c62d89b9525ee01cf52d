@@ -1,8 +1,9 @@
-// 1.21.1	2025-06-11T09:02:49.9416391	Loot Tables
+// 1.21.1	2025-06-20T13:59:09.6855702	Loot Tables
 4802269ad7a2c773e74079ab0e28afc746777ac9 data/lmod/loot_table/blocks/deepslate_pink_diamond_ore.json
 d5f008b964c286d7e7b66b642e72de30b5c5d06c data/lmod/loot_table/blocks/enpowered_gold_block.json
 2d123e449a12c17baeeeccf7c80119e539bdd13a data/lmod/loot_table/blocks/enpowered_powder_block.json
 8906dd6185c725d30fbab29d3b99b7b3d5580244 data/lmod/loot_table/blocks/hard_stone.json
 c07a49791e0e7a560508cdc04452dee2fc0dc187 data/lmod/loot_table/blocks/pink_diamond_block.json
 c10de705709d92ef560d4383d02169138a6a1d0c data/lmod/loot_table/blocks/pink_diamond_ore.json
+4ca65a1d6a21e871832bd4555b43a61c60ed8540 data/lmod/loot_table/blocks/plate_applier.json
 41dc6d4e99b58fe04b1955bd88cbb0a07c4f1aba data/lmod/loot_table/blocks/polished_hard_stone.json

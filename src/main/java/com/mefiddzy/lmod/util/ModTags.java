@@ -27,6 +27,8 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> POSSIBLE_FOR_ORE_COLLECTOR = createTag("possible_for_ore_collector");
 
+        public static final TagKey<Item> BATTERIES = createTag("batteries");
+
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, name));
         }

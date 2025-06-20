@@ -16,14 +16,24 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTes
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
+import java.util.List;
+
 public class ModConfigFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> HARD_STONE_KEY_OVERWORLD = regK("hard_stone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HARD_STONE_KEY_NETHER = regK("nether_hard_stone");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINK_DIAMOND_KEY_OVERWORLD = regK("pink_diamond");
+
     public static void bs(BootstrapContext<ConfiguredFeature<?, ?>> c) {
         RuleTest deepslateReplace = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest stoneReplace = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest netherrackReplace = new BlockMatchTest(Blocks.NETHERRACK);
+
+        List<OreConfiguration.TargetBlockState> overworldPinkDiamond = List.of(
+                OreConfiguration.target(stoneReplace, ModBlocks.PINK_DIAMOND_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplace, ModBlocks.DEEPSLATE_PINK_DIAMOND_ORE.get().defaultBlockState()));
+
 
         reg(c, HARD_STONE_KEY_OVERWORLD, Feature.ORE, new OreConfiguration(
                 deepslateReplace,
@@ -38,6 +48,12 @@ public class ModConfigFeatures {
                 ModBlocks.HARD_STONE.get().defaultBlockState(),
                 5, // Vein size
                 0.2f // Discard chance if exposed to air
+        ));
+
+        reg(c, PINK_DIAMOND_KEY_OVERWORLD, Feature.ORE, new OreConfiguration(
+                overworldPinkDiamond,
+                5, // Vein size
+                0.4f // Discard chance if exposed to air
         ));
     }
 

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "lmod:block/plate_applier"
+    },
+    "facing=south": {
+      "model": "lmod:block/plate_applier",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lmod:block/plate_applier",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "lmod:block/plate_applier",
+      "y": 90
+    }
+  }
+}

@@ -1,25 +1,7 @@
+# About the mod
+This mod was my first mod and I think that as I learn more, the features will become better and more. I plan on using the batteries for machines and to make this mod more tech based.
+> Please don't comment on the horrendous textures of this mod. I did them and I suck at drawing.
+> When I will add entities and block entities, the models will be so much worse than the textures beacause I am not an graphic or 3D designer.
 
-Installation information
-=======
-
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
-
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+<h1></h1>
+<h4>The mod is on <a href = "https://www.curseforge.com/minecraft/mc-mods/lmod">Cursed Forge</a> and not aproved yet on <a href = "https://modrinth.com/mod/lmod">Modrinth</a></h4>

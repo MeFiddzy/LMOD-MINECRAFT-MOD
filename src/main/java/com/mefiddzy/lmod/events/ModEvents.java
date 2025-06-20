@@ -1,8 +1,11 @@
 package com.mefiddzy.lmod.events;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.ModBlocks;
-import com.mefiddzy.lmod.effect.ModEffects;
+import com.mefiddzy.lmod.effect.ModMobEffects;
 import com.mefiddzy.lmod.enchantment.ModEnchantments;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
@@ -33,6 +36,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.ClientChatReceivedEvent;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
@@ -41,6 +45,8 @@ import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
@@ -147,7 +153,7 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void potionRez(LivingDamageEvent.Pre e) {
-        if (e.getEntity().hasEffect(ModEffects.POTION_REZ_EFFECT)) {
+        if (e.getEntity().hasEffect(ModMobEffects.POTION_REZ_EFFECT)) {
             if (e.getSource().is(Tags.DamageTypes.IS_MAGIC)) {
                 e.setNewDamage(0.0f);
             }
@@ -230,6 +236,25 @@ public class ModEvents {
         KillstreakPhases curPhase = KillstreakPhases.getType(kills);
 
         e.replaceModifier(Attributes.ATTACK_DAMAGE, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "killstreak_mod"), curPhase.getAttackDmg(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND);
+    }
+
+    public static String getPlayerName(String uuidString) throws IOException {
+        String urlString = "https://api.mojang.com/user/profiles/" + uuidString.replace("-", "") + "/names";
+        URL url = new URL(urlString);
+
+        try (java.util.Scanner s = new java.util.Scanner(url.openStream()).useDelimiter("\\A")) {
+            String jsonString = s.hasNext() ? s.next() : "";
+
+            Gson gson = new Gson();
+            JsonArray nameHistory = gson.fromJson(jsonString, JsonArray.class);
+
+            if (nameHistory != null && nameHistory.size() > 0) {
+                JsonObject lastNameEntry = nameHistory.get(nameHistory.size() - 1).getAsJsonObject();
+                return lastNameEntry.get("name").getAsString();
+            } else {
+                return null;
+            }
+        }
     }
 }
 

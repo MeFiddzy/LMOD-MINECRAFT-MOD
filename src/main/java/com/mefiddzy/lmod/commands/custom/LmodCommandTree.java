@@ -7,17 +7,33 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
+import net.minecraft.network.chat.ClickEvent;
+import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.ChatFormatting;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.ItemStack;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.util.component.ModDataComp;
 
-public class EditKillsKillstreakCommand {
-    public EditKillsKillstreakCommand(CommandDispatcher<CommandSourceStack> dispatcher) {
+public class LmodCommandTree {
+    public LmodCommandTree(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(
                 Commands.literal("lmod")
+                        .requires(source -> source.hasPermission(2))
+                        .then(Commands.literal("qol")
+                                .then(Commands.literal("fullbright")
+                                        .then(Commands.argument("player", EntityArgument.player())
+                                                .executes(ctx -> {
+                                                    ServerPlayer target = EntityArgument.getPlayer(ctx, "player");
+                                                    return fullbright(ctx.getSource(), target);
+                                                })
+                                        )
+                                )
+                        )
                         .then(Commands.literal("killstreak")
                                 .then(Commands.argument("player", EntityArgument.player())
                                         .then(Commands.literal("set")
@@ -68,10 +84,38 @@ public class EditKillsKillstreakCommand {
                                                         })
                                                 )
                                         )
+                                   )
+                        )
+                        .then(Commands.literal("about")
+                                .executes(ctx -> {
+                                    final String linkCursedForge = "https://www.curseforge.com/minecraft/mc-mods/lmod";
+                                    CommandSourceStack source = ctx.getSource();
+                                    source.sendSuccess(() -> Component.literal("LMod ").withStyle(ChatFormatting.GOLD)
+                                            .withStyle(style -> style
+                                                    .withHoverEvent(new HoverEvent(
+                                                            HoverEvent.Action.SHOW_TEXT,
+                                                            Component.literal("Made with <3 by ").withStyle(ChatFormatting.RED)
+                                                                    .append(Component.literal("MeFiddzy").withStyle(ChatFormatting.YELLOW))
+                                                    ))
+                                            )
+                                            .append(Component.literal("Alpha v0.2").withStyle(ChatFormatting.YELLOW)), false);
 
-                                )
+                                    source.sendSuccess(() -> Component.literal("Cursed Forge")
+                                            .withStyle(style -> style
+                                                    .withColor(ChatFormatting.AQUA)
+                                                    .withUnderlined(true)
+                                                    .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, linkCursedForge))
+                                                    .withHoverEvent(new HoverEvent(
+                                                            HoverEvent.Action.SHOW_TEXT,
+                                                            Component.literal(linkCursedForge).withStyle(ChatFormatting.AQUA)
+                                                    ))
+                                            ), false);
+
+                                    return 1;
+                                })
                         )
         );
+
 
     }
 
@@ -206,6 +250,11 @@ public class EditKillsKillstreakCommand {
         source.sendSuccess(() -> Component.literal(
                 "Set " + target.getName().getString() + "'s sword to phase " + allPhases[finalNumber].getPhaseNumber()
         ), true);
+        return 1;
+    }
+
+    private int fullbright(CommandSourceStack source, ServerPlayer target) {
+        target.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1, false, false));
         return 1;
     }
 
