@@ -50,5 +50,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.PINK_DIAMOND.get())
                 .add(ModItems.TOUGH_POWDER.get())
                 .add(Items.IRON_INGOT);
+
+        tag(ModTags.Items.BATTERIES)
+                .add(ModItems.DURACELL.get());
     }
 }

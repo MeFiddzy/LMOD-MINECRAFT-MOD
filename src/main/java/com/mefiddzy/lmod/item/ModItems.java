@@ -1,6 +1,7 @@
 package com.mefiddzy.lmod.item;
 
 import com.mefiddzy.lmod.LMod;
+import com.mefiddzy.lmod.item.custom.BatteryItem;
 import com.mefiddzy.lmod.item.custom.DustEnpowererItem;
 import com.mefiddzy.lmod.item.custom.FuelItem;
 import com.mefiddzy.lmod.item.custom.KillstreakSwordItem;
@@ -37,6 +38,9 @@ public class ModItems {
     public static final DeferredItem<Item> ENPOWERED_GOLD_STICK = ITEMS.register("enpowered_gold_stick",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> ENPOWERED_GOLD_PLATE = ITEMS.register("enpowered_gold_plate",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC = ITEMS.register("an_enigmatic_encounter_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.AN_ENIGMATIC_ENCOUNTER_KEY).stacksTo(1)){
                 @Override
@@ -47,7 +51,7 @@ public class ModItems {
 
 
     public static final DeferredItem<Item> DURACELL = ITEMS.register("duracell",
-            () -> new Item(new Item.Properties().food(ModFoodPropr.DURACELL)){
+            () -> new BatteryItem(new Item.Properties().food(ModFoodPropr.DURACELL), 2){
                 @Override
                 public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     if (!Screen.hasShiftDown()) {

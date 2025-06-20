@@ -1,6 +1,7 @@
 package com.mefiddzy.lmod;
 
 import com.mefiddzy.lmod.block.ModBlocks;
+import com.mefiddzy.lmod.block.entity.ModBlockEntities;
 import com.mefiddzy.lmod.effect.ModMobEffects;
 import com.mefiddzy.lmod.enchantment.ModEnchantmentEffects;
 import com.mefiddzy.lmod.entity.ModEntities;
@@ -8,6 +9,8 @@ import com.mefiddzy.lmod.entity.client.GigaRoachRenderer;
 import com.mefiddzy.lmod.item.ModCreaiveModTabs;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
+import com.mefiddzy.lmod.screen.ModMenuTypes;
+import com.mefiddzy.lmod.screen.custom.PlateApplierScreen;
 import com.mefiddzy.lmod.sounds.ModSounds;
 import com.mefiddzy.lmod.util.ModItemProp;
 import com.mefiddzy.lmod.util.component.ModDataComp;
@@ -15,6 +18,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -57,6 +61,8 @@ public class LMod
         ModEnchantmentEffects.reg(modEventBus);
         ModEntities.reg(modEventBus);
         ModDataComp.reg(modEventBus);
+        ModMenuTypes.reg(modEventBus);
+        ModBlockEntities.reg(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -95,6 +101,11 @@ public class LMod
             ModItemProp.addCustomItemP();
 
             EntityRenderers.register(ModEntities.GIGA_ROACH.get(), GigaRoachRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void regScreens(RegisterMenuScreensEvent e) {
+            e.register(ModMenuTypes.PLATE_APPLIER_MENU.get(), PlateApplierScreen::new);
         }
 
     }

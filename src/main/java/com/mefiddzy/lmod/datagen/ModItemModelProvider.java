@@ -85,10 +85,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ENPOWERMENT_POWDER.get());
         basicItem(ModItems.ENPOWERED_GOLD_INGOT.get());
         basicItem(ModItems.DURACELL.get());
-        //basicItem(ModItems.DUST_EMPOWERER.get());
         basicItem(ModItems.ENPOWERED_GOLD_STICK.get());
         basicItem(ModItems.AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC.get());
         basicItem(ModItems.PINK_DIAMOND.get());
+        basicItem(ModItems.ENPOWERED_GOLD_PLATE.get());
 
         handheldItem(ModItems.ENPOWERED_GOLD_PICKAXE.get());
         handheldItem(ModItems.ENPOWERED_GOLD_SHOVEL.get());

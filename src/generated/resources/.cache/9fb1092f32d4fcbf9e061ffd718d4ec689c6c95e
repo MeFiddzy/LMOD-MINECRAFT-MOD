@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-13T13:55:14.3898739	Recipes
+// 1.21.1	2025-06-20T13:59:09.6855702	Recipes
 4175c0ade1cddd4bd57aec3b886c3d260ebfcb45 data/lmod/advancement/recipes/misc/an_enigmatic_encounter_music_disc.json
 50be748990deb770ab5df9f0d4f7aef47c2f6222 data/lmod/advancement/recipes/misc/dust_enpowerer.json
 a1131b516efdb58e1395e6db88d204e75a221a58 data/lmod/advancement/recipes/misc/enpowered_gold_axe.json
@@ -7,9 +7,10 @@ ecd95d69781c36cebc768c862a2418e1d1b7b782 data/lmod/advancement/recipes/misc/enpo
 8d0029a898a5ff80b8e4e1e4fe70830c64c1f47c data/lmod/advancement/recipes/misc/enpowered_gold_chestplate.json
 27596f2886f632d39d7d4f1fc3d820b981c2348b data/lmod/advancement/recipes/misc/enpowered_gold_helmet.json
 6abf24ea20a82f0aaf1b9493dfd26c87dfcecdcd data/lmod/advancement/recipes/misc/enpowered_gold_hoe.json
-a03d94e0128263bfbeb695058b3e6aec7e38e77c data/lmod/advancement/recipes/misc/enpowered_gold_ingot.json
+1e87b5f279f90fed6313cdeab7f40cded16fecd1 data/lmod/advancement/recipes/misc/enpowered_gold_ingot.json
 88058a91e8605e18974fd2f39055130e59e14143 data/lmod/advancement/recipes/misc/enpowered_gold_leggings.json
 f2f7769e35470a100e134bb1f17e8cc0606ab3df data/lmod/advancement/recipes/misc/enpowered_gold_pickaxe.json
+8e3f63a06bbe667a72b08333750f6d81b1c60566 data/lmod/advancement/recipes/misc/enpowered_gold_plate.json
 55eda9f72c72f5714717db728b3e6608b3240298 data/lmod/advancement/recipes/misc/enpowered_gold_shovel.json
 fc2f256f974732f170548a12ff20751663c3353a data/lmod/advancement/recipes/misc/enpowered_gold_stick.json
 c432afcd653e04d9dd02857cf26254f36cd79f09 data/lmod/advancement/recipes/misc/enpowered_gold_sword.json
@@ -26,9 +27,10 @@ d23bd75e371af84d0e96d85e91bb1ce7a605bbd1 data/lmod/recipe/enpowered_gold_boots.j
 4ff359cc4743a75d211eb724a634a41f86891c06 data/lmod/recipe/enpowered_gold_chestplate.json
 a80b08e8030d605d2231fb35c13a466add85a70a data/lmod/recipe/enpowered_gold_helmet.json
 c50fdf8b1bb24c80748feb7c3eee445f3379a4a2 data/lmod/recipe/enpowered_gold_hoe.json
-bd267bfc990a619bfa8fde43c349bc1cd508bbf0 data/lmod/recipe/enpowered_gold_ingot.json
+f2a647dae400da68373e2d40fb6e1248c0386a53 data/lmod/recipe/enpowered_gold_ingot.json
 aa00a9502482b0a56b772eedea604669a75ec7cc data/lmod/recipe/enpowered_gold_leggings.json
 409cadf13b168eb3a4ec374496a87ddebff9fae5 data/lmod/recipe/enpowered_gold_pickaxe.json
+b52d319a5754781a45a8433b28a5bc5c939c2531 data/lmod/recipe/enpowered_gold_plate.json
 d3b4328efd08f4f46b15ddbafbc6326648f9475f data/lmod/recipe/enpowered_gold_shovel.json
 0f2d1b7f71e26f4c51d2e6da580149ebe97d365c data/lmod/recipe/enpowered_gold_stick.json
 bd74b6fcfc77c5ac648c5cf0b90e69e7dc61a432 data/lmod/recipe/enpowered_gold_sword.json

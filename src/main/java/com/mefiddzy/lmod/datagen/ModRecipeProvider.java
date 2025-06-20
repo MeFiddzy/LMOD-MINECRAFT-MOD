@@ -45,11 +45,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.ENPOWERMENT_POWDER)
                 .requires(ModItems.ENPOWERMENT_POWDER)
                 .requires(ModItems.ENPOWERMENT_POWDER)
-                .requires(Items.GOLD_INGOT)
-                .requires(Items.GOLD_INGOT)
-                .requires(Items.GOLD_INGOT)
-                .requires(Items.GOLD_INGOT)
-                .unlockedBy("_has_enpower_powder", has(ModItems.ENPOWERMENT_POWDER)).save(recipeOutput);
+                .requires(Items.NETHERITE_INGOT)
+                .requires(Items.NETHERITE_INGOT)
+                .requires(Items.NETHERITE_INGOT)
+                .requires(Items.NETHERITE_INGOT)
+                .unlockedBy("_has_enpower_powder", has(ModItems.ENPOWERMENT_POWDER))
+                .unlockedBy("_has_netherite_ingot", has(Items.NETHERITE_INGOT))
+                .save(recipeOutput);
 
         oreSmelting(recipeOutput, List.of(Blocks.IRON_BLOCK), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 200, "duracell");
         oreBlasting(recipeOutput, List.of(Blocks.IRON_BLOCK), RecipeCategory.MISC ,ModItems.DURACELL, 1.5f, 100, "duracell");
@@ -202,6 +204,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.ENPOWERED_GOLD_STICK)
                 .unlockedBy("_has_pink_diamond_block", has(ModBlocks.PINK_DIAMOND_BLOCK))
                 .unlockedBy("_has_enpowered_gold_stick", has(ModItems.ENPOWERED_GOLD_STICK))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENPOWERED_GOLD_PLATE, 3)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("GGG")
+                .define('G', ModItems.ENPOWERED_GOLD_INGOT)
+                .unlockedBy("_has_enpowered_gold", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
     }
 
