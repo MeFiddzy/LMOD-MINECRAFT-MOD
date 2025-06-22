@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lmod:item/enpowered_gold_plate"
+  }
+}

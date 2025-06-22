@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "_has_enpower_powder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lmod:enpowerment_powder"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "_has_netherite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "lmod:enpowered_gold_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "_has_enpower_powder",
+      "_has_netherite_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "lmod:enpowered_gold_ingot"
+    ]
+  }
+}

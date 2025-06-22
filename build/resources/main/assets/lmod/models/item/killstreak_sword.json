@@ -1,0 +1,62 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lmod:item/killstreak/p1"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lmod:phase": 2
+      },
+      "model": "lmod:item/killstreak_sword/p2"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 3
+      },
+      "model": "lmod:item/killstreak_sword/p3"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 4
+      },
+      "model": "lmod:item/killstreak_sword/p4"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 5
+      },
+      "model": "lmod:item/killstreak_sword/p5"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 6
+      },
+      "model": "lmod:item/killstreak_sword/p6"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 7
+      },
+      "model": "lmod:item/killstreak_sword/p7"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 8
+      },
+      "model": "lmod:item/killstreak_sword/p8"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 9
+      },
+      "model": "lmod:item/killstreak_sword/p9"
+    },
+    {
+      "predicate": {
+        "lmod:phase": 10
+      },
+      "model": "lmod:item/killstreak_sword/p10"
+    }
+  ]
+}

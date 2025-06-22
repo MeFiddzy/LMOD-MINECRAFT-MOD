@@ -1,0 +1,50 @@
+/effect clear
+/data get block 30 74 -27
+/data modify block 30 74 -27 plate_applier.charge set value 1
+/data get block 30 74 -27
+/data modify block 30 74 -27 lmod:plate_applier.charge set value 1
+/data get block 30 74 -27
+/fill 30 64 -24 30 -80 -24 air
+/fill 30 64 -24 30 -64 -24 air
+/tp ~ ~100 ~
+/recipe
+/give @p vine
+/give @p lmod:duracell 4
+/effect give @p lmod:potion_rez infinite 1 true
+/give @p minecraft:ocelot_spawn_egg 64
+/effect clear
+/effect give @p lmod:potion_rez infinite 1 true
+/effect clear
+/tp @p ~ ~100 ~
+/fill 19 73 -29 19 -63 -29 air
+/tp @p ~ 73 ~
+/tp @p ~ 76 ~
+/tp @p ~1 73 ~
+/tp @p ~1 75 ~
+/give @p minecraft:debug_stick
+/give @p minecraft:grass_block[minecraft:custom_data={snowy: 1}]
+/give @p redstone
+/give @p lmod:hard_stone 47
+/give @p minecraft:iron_ingot 4
+/give @p lmod:perma_empowerer
+/give @p glass
+/give @p minecraft:netherite_ingot 21
+/give @p lmod:hard_stone 89
+/effect give @p minecraft:haste infinite 20 true'
+/effect give @p minecraft:haste infinite 20 true
+/give @p diamond 11
+/give @p diamond 33
+/clear @p minecraft:diamond
+/summon minecraft:villager
+/effectc
+/effect clear
+/gamemode survival
+/give @a lmod:an_enigmatic_encounter_music_disc
+/give @a lmod:enpowered_gold_pickaxe
+/kill
+/fill 14 72 -28
+/fill 14 72 -28 ~ ~ ~ air
+/kill @e[type= minecraft:item]
+/weather rain
+/weather c
+/weather clear

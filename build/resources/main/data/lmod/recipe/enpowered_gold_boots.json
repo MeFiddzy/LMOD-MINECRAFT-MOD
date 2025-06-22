@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "lmod:enpowered_gold_ingot"
+    }
+  },
+  "pattern": [
+    "E E",
+    "E E",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:enpowered_gold_boots"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "D": {
+      "item": "minecraft:music_disc_5"
+    },
+    "H": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "P": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "BHB",
+    "RDR",
+    "BPB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:an_enigmatic_encounter_music_disc"
+  }
+}

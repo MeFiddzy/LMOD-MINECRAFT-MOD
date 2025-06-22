@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_top",
+  "textures": {
+    "side": "lmod:block/perma_empowerer_side",
+    "top": "lmod:block/perma_empowerer_top"
+  }
+}

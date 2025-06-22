@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "lmod:enpowered_powder_block"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "ENE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:perma_empowerer"
+  }
+}

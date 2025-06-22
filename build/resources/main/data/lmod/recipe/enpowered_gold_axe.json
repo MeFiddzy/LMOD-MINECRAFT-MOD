@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "lmod:enpowered_gold_ingot"
+    },
+    "S": {
+      "item": "lmod:enpowered_gold_stick"
+    }
+  },
+  "pattern": [
+    " EE",
+    " SE",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:enpowered_gold_axe"
+  }
+}

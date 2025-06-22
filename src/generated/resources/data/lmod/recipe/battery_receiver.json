@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "H": {
+      "item": "lmod:enpowered_gold_heart"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "IHI",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:battery_receiver"
+  }
+}

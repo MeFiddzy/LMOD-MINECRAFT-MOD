@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "_has_enpower_powder_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lmod:enpowered_powder_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "_has_nether_star": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:nether_star"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "lmod:perma_empowerer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "_has_enpower_powder_block",
+      "_has_nether_star"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "lmod:perma_empowerer"
+    ]
+  }
+}

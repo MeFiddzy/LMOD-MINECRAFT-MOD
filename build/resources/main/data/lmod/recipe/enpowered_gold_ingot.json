@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "lmod:enpowerment_powder"
+    },
+    {
+      "item": "lmod:enpowerment_powder"
+    },
+    {
+      "item": "lmod:enpowerment_powder"
+    },
+    {
+      "item": "lmod:enpowerment_powder"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:enpowered_gold_ingot"
+  }
+}

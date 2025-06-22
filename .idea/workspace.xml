@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="180ea591-297b-4ee9-bb42-a1fe5660bcf6" name="Changes" comment="E">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/custom/BatteryBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/InfoCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/JEILModPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/PlateApplierRecipeCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/InfoRecipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/ModRecipes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/PlateApplierRecipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/PlateApplierRecipeInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_axe_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_boots_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_chestplate_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_helmet_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_hoe_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_leggings_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_pickaxe_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_shovel_plate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_sword_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/284f6d33e6a9788c40c37204c08dfbad5d2bd0d4" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/284f6d33e6a9788c40c37204c08dfbad5d2bd0d4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/9fb1092f32d4fcbf9e061ffd718d4ec689c6c95e" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/9fb1092f32d4fcbf9e061ffd718d4ec689c6c95e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/b483a438472ca86aba01e4baaa7a09e6a290974a" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/b483a438472ca86aba01e4baaa7a09e6a290974a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/bf057416b1c83715ab8603ff2ecc5a04f3b4090e" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/bf057416b1c83715ab8603ff2ecc5a04f3b4090e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/e1f9b6f46e55fe0e93ba6062a6a4e152b4614195" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/e1f9b6f46e55fe0e93ba6062a6a4e152b4614195" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/data/lmod/recipe/enpowered_gold_ingot.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/data/lmod/recipe/enpowered_gold_ingot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/mineable/pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/mineable/pickaxe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/needs_iron_tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/needs_iron_tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/LMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/LMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/custom/PlateApplierBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/custom/PlateApplierBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/entity/PlateApplierBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/entity/PlateApplierBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockLootTableProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockLootTableProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockTagProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockTagProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockstateProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockstateProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemModelProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemModelProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemTagProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemTagProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModRecipeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModRecipeProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/events/ModEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/events/ModEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModCreaiveModTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModCreaiveModTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/lmod/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/lmod/lang/en_us.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MeFiddzy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MeFiddzy/LMOD.git&quot;,
+    &quot;accountId&quot;: &quot;80730fe5-dccc-4f6c-be93-95d5d6e72fde&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2yQXD0J4A2ygg56etnzIl8PqjGQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.LMOD [:net.neoforged.devlaunch.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/LMOD/src/main/resources/data/lmod/recipe&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\LMOD\src\main\resources\data\lmod\recipe" />
+      <recent name="D:\Java\LMOD\run\mods" />
+      <recent name="D:\Java\LMOD\src\main\resources\data\lmod\recipe\plate_applier" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\LMOD\src\main\resources\data\lmod\recipes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="LMOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\clientRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\clientRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Data" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="LMOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\dataRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\dataRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTestServer" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="LMOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\gameTestServerRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\gameTestServerRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="LMOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\serverRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\serverRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="180ea591-297b-4ee9-bb42-a1fe5660bcf6" name="Changes" comment="" />
+      <created>1749767647729</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749767647729</updated>
+    </task>
+    <task id="LOCAL-00001" summary="E">
+      <option name="closed" value="true" />
+      <created>1750444389377</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750444389377</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="E" />
+    <option name="LAST_COMMIT_MESSAGE" value="E" />
+  </component>
+</project>

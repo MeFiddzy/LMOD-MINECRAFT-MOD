@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "lmod:pink_diamond_block"
+    },
+    "S": {
+      "item": "lmod:enpowered_gold_stick"
+    }
+  },
+  "pattern": [
+    " B ",
+    " B ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:killstreak_sword"
+  }
+}

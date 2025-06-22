@@ -1,0 +1,110 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 2025-06-21 22:46:35
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.addToListeners(EventBus.java:258) ~[bus-8.0.2.jar%23141!/:?] {}
+-- Mod loading issue for: lmod --
+Details:
+	Mod file: /D:/Java/LMOD/build/classes/java/main/
+	Failure message: LMod (lmod) has failed to load correctly
+		java.lang.IllegalArgumentException: Cannot register listeners for abstract class net.neoforged.neoforge.event.tick.EntityTickEvent. Register a listener to one of its subclasses instead!
+	Mod version: 0.0.1
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.IllegalArgumentException: Cannot register listeners for abstract class net.neoforged.neoforge.event.tick.EntityTickEvent. Register a listener to one of its subclasses instead!
+Stacktrace:
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.addToListeners(EventBus.java:258) ~[bus-8.0.2.jar%23141!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:253) ~[bus-8.0.2.jar%23141!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.registerListener(EventBus.java:169) ~[bus-8.0.2.jar%23141!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:91) ~[bus-8.0.2.jar%23141!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.lambda$inject$4(AutomaticEventSubscriber.java:60) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.inject(AutomaticEventSubscriber.java:44) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:126) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.7, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 73116264 bytes (69 MiB) / 482344960 bytes (460 MiB) up to 8376025088 bytes (7988 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 7840HS w/ Radeon 780M Graphics     
+	Identifier: AuthenticAMD Family 25 Model 116 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.79
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce RTX 4070 Laptop GPU
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8188.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.7652
+	Graphics card #1 name: AMD Radeon(TM) 780M
+	Graphics card #1 vendor: Advanced Micro Devices, Inc.
+	Graphics card #1 VRAM (MiB): 512.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 31.0.14005.22001
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 5.60
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 5.60
+	Memory slot #1 type: Unknown
+	Virtual memory max (MiB): 60610.36
+	Virtual memory used (MiB): 48536.56
+	Swap memory total (MiB): 28672.00
+	Swap memory used (MiB): 743.98
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 39803.19, total: 249182.00
+	Space in storage for workdir (MiB): available: 393763.56, total: 726720.00
+	JVM Flags: 0 total; 
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.31.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.31.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.31.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		jei-1.21.1-neoforge-19.21.2.313.jar               |Just Enough Items             |jei                           |19.21.2.313         |Manifest: NOSIGNATURE
+		main                                              |LMod                          |lmod                          |0.0.1               |Manifest: NOSIGNATURE
+		neoforge-21.1.77-minecraft-merged.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.77-minecraft-merged.jar             |NeoForge                      |neoforge                      |21.1.77             |Manifest: NOSIGNATURE
+	Crash Report UUID: cec0ea20-2cd9-40f7-b0e1-758c0564cb2f
+	FML: 4.0.31
+	NeoForge: 21.1.77

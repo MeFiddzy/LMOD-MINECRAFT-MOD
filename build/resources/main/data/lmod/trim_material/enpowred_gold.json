@@ -1,0 +1,9 @@
+{
+  "asset_name": "enpowred_gold",
+  "description": {
+    "color": "#DFBCE6",
+    "translate": "trim_material.lmod.enpowred_gold"
+  },
+  "ingredient": "lmod:enpowered_gold_ingot",
+  "item_model_index": 1.0
+}

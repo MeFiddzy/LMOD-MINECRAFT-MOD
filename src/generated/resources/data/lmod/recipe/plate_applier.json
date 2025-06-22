@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "lmod:enpowered_gold_heart"
+    },
+    "B": {
+      "item": "lmod:battery_receiver"
+    },
+    "H": {
+      "item": "lmod:hard_stone"
+    },
+    "P": {
+      "item": "lmod:enpowered_gold_plate"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "BPR",
+    "H!H",
+    "HHH"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:plate_applier"
+  }
+}

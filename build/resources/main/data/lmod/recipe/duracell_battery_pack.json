@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "lmod:duracell"
+    },
+    {
+      "item": "lmod:duracell"
+    },
+    {
+      "item": "lmod:duracell"
+    },
+    {
+      "item": "lmod:duracell"
+    },
+    {
+      "item": "minecraft:glass"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "lmod:duracell_battery_pack"
+  }
+}

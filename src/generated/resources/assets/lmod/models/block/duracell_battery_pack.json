@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "lmod:block/duracell_battery_pack_bottom",
+    "side": "lmod:block/duracell_battery_pack_side",
+    "top": "lmod:block/duracell_battery_pack_top"
+  }
+}
