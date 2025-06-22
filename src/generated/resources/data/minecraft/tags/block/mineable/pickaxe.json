@@ -1,10 +1,12 @@
 {
   "values": [
     "lmod:hard_stone",
+    "lmod:plate_applier",
     "lmod:pink_diamond_ore",
     "lmod:deepslate_pink_diamond_ore",
     "lmod:pink_diamond_block",
     "lmod:enpowered_gold_block",
+    "lmod:duracell_battery_pack",
     "lmod:polished_hard_stone"
   ]
 }

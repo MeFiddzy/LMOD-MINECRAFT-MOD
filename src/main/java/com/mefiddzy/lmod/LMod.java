@@ -9,6 +9,7 @@ import com.mefiddzy.lmod.entity.client.GigaRoachRenderer;
 import com.mefiddzy.lmod.item.ModCreaiveModTabs;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
+import com.mefiddzy.lmod.recipe.ModRecipes;
 import com.mefiddzy.lmod.screen.ModMenuTypes;
 import com.mefiddzy.lmod.screen.custom.PlateApplierScreen;
 import com.mefiddzy.lmod.sounds.ModSounds;
@@ -63,6 +64,8 @@ public class LMod
         ModDataComp.reg(modEventBus);
         ModMenuTypes.reg(modEventBus);
         ModBlockEntities.reg(modEventBus);
+        ModRecipes.reg(modEventBus);
+        LMod.LOGGER.info("Registering Deferred Registers!");
 
         modEventBus.addListener(this::addCreative);
 

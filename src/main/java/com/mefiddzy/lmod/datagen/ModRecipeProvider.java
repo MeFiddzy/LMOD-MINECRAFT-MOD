@@ -46,9 +46,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.ENPOWERMENT_POWDER)
                 .requires(ModItems.ENPOWERMENT_POWDER)
                 .requires(Items.NETHERITE_INGOT)
-                .requires(Items.NETHERITE_INGOT)
-                .requires(Items.NETHERITE_INGOT)
-                .requires(Items.NETHERITE_INGOT)
                 .unlockedBy("_has_enpower_powder", has(ModItems.ENPOWERMENT_POWDER))
                 .unlockedBy("_has_netherite_ingot", has(Items.NETHERITE_INGOT))
                 .save(recipeOutput);
@@ -213,6 +210,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', ModItems.ENPOWERED_GOLD_INGOT)
                 .unlockedBy("_has_enpowered_gold", has(ModItems.ENPOWERED_GOLD_INGOT))
                 .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.DURACELL_BATTERY_PACK, 1)
+                .requires(ModItems.DURACELL, 4)
+                .requires(Blocks.GLASS)
+                .unlockedBy("_has_duracell", has(ModItems.DURACELL))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BATTERY_RECEIVER)
+                .pattern("IGI")
+                .pattern("IHI")
+                .pattern("   ")
+                .define('I', Items.IRON_INGOT)
+                .define('G', Items.GLASS)
+                .define('H', ModItems.ENPOWERED_GOLD_HEART)
+                .unlockedBy("_has_heart", has(ModItems.ENPOWERED_GOLD_HEART))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLATE_APPLIER)
+                .pattern("BPR")
+                .pattern("H!H")
+                .pattern("HHH")
+                .define('B', ModItems.BATTERY_RECEIVER.asItem())
+                .define('P', ModItems.ENPOWERED_GOLD_PLATE.asItem())
+                .define('H', ModBlocks.HARD_STONE.asItem())
+                .define('!', ModItems.ENPOWERED_GOLD_HEART.asItem())
+                .define('R', Items.REDSTONE)
+                .unlockedBy("_has_heart", has(ModItems.ENPOWERED_GOLD_HEART)).save(recipeOutput);
     }
 
 }

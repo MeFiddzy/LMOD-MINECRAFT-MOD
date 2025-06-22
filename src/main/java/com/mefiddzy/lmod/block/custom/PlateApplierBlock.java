@@ -105,4 +105,15 @@ public class PlateApplierBlock extends BaseEntityBlock {
         return createTickerHelper(blockEntityType, ModBlockEntities.PLATE_APPLIER_BE.get(),
                 (lv, pos, bstate, blockEntity) -> blockEntity.tick(lv, pos, bstate));
     }
+
+    @Override
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+        if (state.getBlock() != newState.getBlock()) {
+            if (level.getBlockEntity(pos) instanceof PlateApplierBlockEntity blockEntity) {
+                blockEntity.drop();
+                level.updateNeighbourForOutputSignal(pos, this);
+                level.removeBlockEntity(pos);
+            }
+        }
+    }
 }

@@ -1,0 +1,14 @@
+{
+  "type": "lmod:plate_applier",
+  "input1": {
+    "item": "lmod:enpowered_gold_plate"
+  },
+  "input2": {
+    "item": "minecraft:diamond_boots"
+  },
+  "result": {
+    "id": "lmod:enpowered_gold_boots",
+    "count": 1
+  },
+  "charge": 1
+}

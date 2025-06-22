@@ -34,16 +34,20 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientChatReceivedEvent;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
+import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -238,23 +242,34 @@ public class ModEvents {
         e.replaceModifier(Attributes.ATTACK_DAMAGE, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "killstreak_mod"), curPhase.getAttackDmg(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND);
     }
 
-    public static String getPlayerName(String uuidString) throws IOException {
-        String urlString = "https://api.mojang.com/user/profiles/" + uuidString.replace("-", "") + "/names";
-        URL url = new URL(urlString);
+    @SubscribeEvent
+    public static void enpoweredGoldHeartBedrock(EntityTickEvent.Post e) {
+        Entity entity = e.getEntity();
 
-        try (java.util.Scanner s = new java.util.Scanner(url.openStream()).useDelimiter("\\A")) {
-            String jsonString = s.hasNext() ? s.next() : "";
+        if (!(entity instanceof ItemEntity item))
+            return;
 
-            Gson gson = new Gson();
-            JsonArray nameHistory = gson.fromJson(jsonString, JsonArray.class);
+        ItemStack stack = item.getItem();
+        var level = item.level();
 
-            if (nameHistory != null && nameHistory.size() > 0) {
-                JsonObject lastNameEntry = nameHistory.get(nameHistory.size() - 1).getAsJsonObject();
-                return lastNameEntry.get("name").getAsString();
-            } else {
-                return null;
-            }
+        if (stack.getItem() != ModBlocks.ENPOWERED_GOLD_BLOCK.asItem())
+            return;
+
+        if (item.getDeltaMovement().y() != 0 || !item.isAlive())
+            return;
+
+        BlockPos posBelow = item.blockPosition().below();
+        if (level.getBlockState(posBelow).getBlock() == Blocks.BEDROCK) {
+            item.remove(Entity.RemovalReason.DISCARDED);
+
+            ItemEntity newItem = new ItemEntity(
+                    level,
+                    item.getX(), item.getY(), item.getZ(),
+                    new ItemStack(ModItems.ENPOWERED_GOLD_HEART.asItem(), stack.getCount())
+            );
+            level.addFreshEntity(newItem);
         }
     }
+
 }
 

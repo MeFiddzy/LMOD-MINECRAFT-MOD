@@ -1,8 +1,8 @@
-// 1.21.1	2025-06-11T22:24:42.1431307	Tags for minecraft:block mod id lmod
+// 1.21.1	2025-06-21T22:00:44.1028946	Tags for minecraft:block mod id lmod
 b73337f3a51c7fff1c4366390d7b69de9a79fd18 data/lmod/tags/block/incorrect_for_enpowered_gold_tool.json
 90e17d7f18b9a85e22b30cc872faa171fb329c3a data/lmod/tags/block/needs_enpowered_gold_tool.json
 8dd9194492a51b40153c68f2381b0eaa8f09a217 data/lmod/tags/block/ore_collector_drop_blocks.json
 9a1a278c76927cf258bbe4fcb13eaf3837ee08a8 data/minecraft/tags/block/mineable/hoe.json
-22a3fa556f5172f96ca1f9f7be88af0acd104fa2 data/minecraft/tags/block/mineable/pickaxe.json
+fe433440d4e75e5a33a79e4e15c80bd2187ce49d data/minecraft/tags/block/mineable/pickaxe.json
 6a8f733f662f62e2184bfa87c9cc1f991239a371 data/minecraft/tags/block/needs_diamond_tool.json
-ca13287d49002233b9b306b4aa17f168e9d577c2 data/minecraft/tags/block/needs_iron_tool.json
+ea28d2059badecb9a86f849ff6375410833bf2f2 data/minecraft/tags/block/needs_iron_tool.json

@@ -1,6 +1,7 @@
 package com.mefiddzy.lmod.datagen;
 
 import com.mefiddzy.lmod.LMod;
+import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -52,6 +53,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.IRON_INGOT);
 
         tag(ModTags.Items.BATTERIES)
+                .add(ModBlocks.DURACELL_BATTERY_PACK.asItem())
                 .add(ModItems.DURACELL.get());
     }
 }

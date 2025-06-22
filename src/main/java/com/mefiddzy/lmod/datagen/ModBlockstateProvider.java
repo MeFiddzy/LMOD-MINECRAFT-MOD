@@ -22,6 +22,7 @@ public class ModBlockstateProvider extends BlockStateProvider {
         blockWithItemAll(ModBlocks.PINK_DIAMOND_ORE);
         blockWithItemAll(ModBlocks.DEEPSLATE_PINK_DIAMOND_ORE);
         blockWithItemAll(ModBlocks.PINK_DIAMOND_BLOCK);
+        blockWithTopAndBottom(ModBlocks.DURACELL_BATTERY_PACK);
     }
 
     private void blockWithItemAll(DeferredBlock<?> db) {
@@ -35,6 +36,17 @@ public class ModBlockstateProvider extends BlockStateProvider {
                 name,
                 modLoc("block/" + name + "_side"),  // side & bottom texture
                 modLoc("block/" + name + "_top")    // top texture
+        ));
+    }
+
+    private void blockWithTopAndBottom(DeferredBlock<?> db) {
+        String name = db.getId().getPath();
+
+        simpleBlockWithItem(db.get(), models().cubeBottomTop(
+                name,
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_bottom"),
+                modLoc("block/" + name + "_top")
         ));
     }
 

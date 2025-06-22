@@ -1,5 +1,6 @@
-// 1.21.1	2025-06-20T12:48:40.6808534	Item Models: lmod
+// 1.21.1	2025-06-21T23:00:07.2992882	Item Models: lmod
 3855f4ca25b4a0f69cf25204240768376bafa613 assets/lmod/models/item/an_enigmatic_encounter_music_disc.json
+4f0239e202284db9c4df0d8edde06811bc88bbdd assets/lmod/models/item/battery_receiver.json
 7eaba4394965a4dc83d959b2d54368b5fc9b46f3 assets/lmod/models/item/duracell.json
 feb08e262df6637dde8e57558493e779563b595d assets/lmod/models/item/enpowered_gold_axe.json
 12883413ea084e6f5aefe4d56bec092b5b71c342 assets/lmod/models/item/enpowered_gold_boots.json
@@ -24,6 +25,7 @@ fe01b298c649cf6791466fd9a937f5def6cbd781 assets/lmod/models/item/enpowered_gold_
 1f15feea9dc76f6073c7ba1f265dc0f6749223e6 assets/lmod/models/item/enpowered_gold_chestplate_netherite_trim.json
 74998f5a9014443f559137dd4dd9ec5a2ef5897a assets/lmod/models/item/enpowered_gold_chestplate_quartz_trim.json
 44c4e3e04226c6e38ed92aa8f10377314106bc26 assets/lmod/models/item/enpowered_gold_chestplate_redstone_trim.json
+c5fcfe8a42fa8aba0c4a9804ee1b7c9a32360874 assets/lmod/models/item/enpowered_gold_heart.json
 fc9911164da5f3bb1598f0ce4176164fc7c05603 assets/lmod/models/item/enpowered_gold_helmet.json
 91ff35b0dd903559ad2d8994526725810fddd269 assets/lmod/models/item/enpowered_gold_helmet_amethyst_trim.json
 3451f0ef902a30ecec0cf41908ed4f15707f02af assets/lmod/models/item/enpowered_gold_helmet_copper_trim.json

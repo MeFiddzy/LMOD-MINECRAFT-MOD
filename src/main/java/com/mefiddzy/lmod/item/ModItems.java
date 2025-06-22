@@ -6,8 +6,6 @@ import com.mefiddzy.lmod.item.custom.DustEnpowererItem;
 import com.mefiddzy.lmod.item.custom.FuelItem;
 import com.mefiddzy.lmod.item.custom.KillstreakSwordItem;
 import com.mefiddzy.lmod.sounds.ModSounds;
-import com.mefiddzy.lmod.util.component.ModDataComp;
-import com.mefiddzy.lmod.util.enums.KillstreakPhases;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -41,6 +39,23 @@ public class ModItems {
     public static final DeferredItem<Item> ENPOWERED_GOLD_PLATE = ITEMS.register("enpowered_gold_plate",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> BATTERY_RECEIVER = ITEMS.register("battery_receiver",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> ENPOWERED_GOLD_HEART = ITEMS.register("enpowered_gold_heart",
+            () -> new Item(new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    if (!Screen.hasShiftDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.lmod.noshift"));
+                    }
+                    else {
+                        tooltipComponents.add(Component.translatable("tooltip.lmod.item.enpowered_gold_heart"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
+
     public static final DeferredItem<Item> AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC = ITEMS.register("an_enigmatic_encounter_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.AN_ENIGMATIC_ENCOUNTER_KEY).stacksTo(1)){
                 @Override
@@ -51,7 +66,7 @@ public class ModItems {
 
 
     public static final DeferredItem<Item> DURACELL = ITEMS.register("duracell",
-            () -> new BatteryItem(new Item.Properties().food(ModFoodPropr.DURACELL), 2){
+            () -> new BatteryItem(new Item.Properties().food(ModFoodPropr.DURACELL), 1){
                 @Override
                 public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     if (!Screen.hasShiftDown()) {

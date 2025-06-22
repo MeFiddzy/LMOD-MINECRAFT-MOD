@@ -36,8 +36,11 @@ public class ModCreaiveModTabs {
                 output.accept(ModItems.PINK_DIAMOND);
                 output.accept(ModItems.KILLSTREAK_SWORD);
                 output.accept(ModItems.ENPOWERED_GOLD_PLATE);
+                output.accept(ModItems.BATTERY_RECEIVER);
+                output.accept(ModItems.ENPOWERED_GOLD_HEART);
 
                 output.accept(ModBlocks.HARD_STONE);
+                output.accept(ModBlocks.DURACELL_BATTERY_PACK);
                 output.accept(ModBlocks.PINK_DIAMOND_BLOCK);
                 output.accept(ModBlocks.PINK_DIAMOND_ORE);
                 output.accept(ModBlocks.DEEPSLATE_PINK_DIAMOND_ORE);

@@ -2,7 +2,6 @@ package com.mefiddzy.lmod.screen.custom;
 
 import com.mefiddzy.lmod.block.ModBlocks;
 import com.mefiddzy.lmod.block.entity.PlateApplierBlockEntity;
-import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.screen.ModMenuTypes;
 import com.mefiddzy.lmod.util.ModTags;
 import net.minecraft.network.FriendlyByteBuf;
@@ -11,7 +10,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -34,14 +32,23 @@ public class PlateApplierMenu extends AbstractContainerMenu {
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
         if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
+
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
+
         if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
-            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX
-                    + TE_INVENTORY_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;
+            if (sourceStack.is(ModTags.Items.BATTERIES)) {
+                if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX + PlateApplierBlockEntity.in_bat,
+                        TE_INVENTORY_FIRST_SLOT_INDEX + PlateApplierBlockEntity.in_bat + 1, false)) {
+                    return ItemStack.EMPTY;
+                }
+            } else {
+                if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT, false)) {
+                    return ItemStack.EMPTY;
+                }
             }
-        } else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
+        }
+        else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
             if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;
             }
@@ -49,14 +56,17 @@ public class PlateApplierMenu extends AbstractContainerMenu {
             System.out.println("Invalid slotIndex:" + pIndex);
             return ItemStack.EMPTY;
         }
+
         if (sourceStack.getCount() == 0) {
             sourceSlot.set(ItemStack.EMPTY);
         } else {
             sourceSlot.setChanged();
         }
+
         sourceSlot.onTake(playerIn, sourceStack);
         return copyOfSourceStack;
     }
+
 
     public PlateApplierMenu(int coId, Inventory inv, FriendlyByteBuf extra) {
         this(coId, inv, inv.player.level().getBlockEntity(extra.readBlockPos()));
@@ -95,23 +105,6 @@ public class PlateApplierMenu extends AbstractContainerMenu {
         boolean valid = stillValid(ContainerLevelAccess.create(level, be.getBlockPos()), player, ModBlocks.PLATE_APPLIER.get());
         return valid;
     }
-
-    @Override
-    public void removed(Player player) {
-        super.removed(player);
-
-        if (!player.level().isClientSide()) {
-            for (int i = 0; i < be.inv.getSlots(); i++) {
-                ItemStack stack = be.inv.getStackInSlot(i);
-                if (!stack.isEmpty()) {
-                    giveCommand(stack.copy(), player);
-                    be.inv.setStackInSlot(i, ItemStack.EMPTY);
-                }
-            }
-        }
-    }
-
-
 
     private void addPlayerInventory(Inventory pli) {
         for (int i = 0; i < 3; i++) {

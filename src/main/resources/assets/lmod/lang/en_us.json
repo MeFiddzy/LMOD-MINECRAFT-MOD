@@ -19,6 +19,8 @@
   "item.lmod.an_enigmatic_encounter_music_disc": "An Enigmatic Encounter Music Disc",
   "item.lmod.killstreak_sword": "Killstreak Sword",
   "item.lmod.enpowered_gold_plate": "Enpowered Gold Plate",
+  "item.lmod.enpowered_gold_heart": "Enpowered Gold Heart",
+  "item.lmod.battery_receiver": "Battery Receiver",
 
   "item.minecraft.potion.effect.potion_rez_potion": "Potion of Potion Resistance",
   "item.minecraft.splash_potion.effect.potion_rez_potion": "Splash Potion of Potion Resistance",
@@ -33,6 +35,7 @@
   "block.lmod.pink_diamond_ore": "Pink Diamond Ore",
   "block.lmod.deepslate_pink_diamond_ore": "Deepslate Pink Diamond Ore",
   "block.lmod.plate_applier": "Plate Applier",
+  "block.lmod.duracell_battery_pack": "Duracell Battery Pack",
 
   "creativetab.lmod.building_blocks": "LMod - Building Blocks",
   "creativetab.lmod.technical_items": "LMod - Technical Items",
@@ -41,6 +44,7 @@
   "tooltip.lmod.block.permanent_empower": "Right click the block while holding the tough dust \nitem to convert it into a powerful form.\nI wonder what happens if I step on this block...",
   "tooltip.lmod.item.dust_empower": "Right click on an obsidian block \nat the height limit (y = 320) while holding some\ntough powder to convert it into a more powerful \nversion. \nNOTE: You will sacrifice the obsidian though.",
   "tooltip.lmod.item.duracell": "Will you take the risk of eating batteries?",
+  "tooltip.lmod.item.enpowered_gold_heart": "The §4Main Component§r in all of the §6LMod's§r tech aspects.",
   "tooltip.lmod.item.an_enigmatic_encounter": "My fav song <3",
   "tooltip.lmod.item.killstreak.phase1": "A§l Weak§r Peasant",
   "tooltip.lmod.item.killstreak.phase2": "§9A Humble Beginning",
