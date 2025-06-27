@@ -1,5 +1,6 @@
-package com.mefiddzy.lmod.recipe;
+package com.mefiddzy.lmod.recipe.custom.plate_applier;
 
+import com.mefiddzy.lmod.recipe.ModRecipes;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

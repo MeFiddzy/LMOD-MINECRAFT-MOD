@@ -58,6 +58,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PINK_DIAMOND_BLOCK.get());
         dropSelf(ModBlocks.PLATE_APPLIER.get());
         dropSelf(ModBlocks.DURACELL_BATTERY_PACK.get());
+        dropSelf(ModBlocks.BATTERY_ENCASER.get());
         add(ModBlocks.HARD_STONE.get(),
                 block -> createMultipleOreDropNoFortune(ModBlocks.HARD_STONE.get(), ModItems.TOUGH_POWDER.get(), 1.00f, 1.00f));
         add(ModBlocks.DEEPSLATE_PINK_DIAMOND_ORE.get(),

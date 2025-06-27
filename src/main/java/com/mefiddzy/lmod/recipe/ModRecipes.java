@@ -1,6 +1,8 @@
 package com.mefiddzy.lmod.recipe;
 
 import com.mefiddzy.lmod.LMod;
+import com.mefiddzy.lmod.recipe.custom.battery_encaser.BatteryEncaserRecipe;
+import com.mefiddzy.lmod.recipe.custom.plate_applier.PlateApplierRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -22,6 +24,17 @@ public class ModRecipes {
                 @Override
                 public String toString() {
                     return "plate_applier";
+                }
+            });
+
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BatteryEncaserRecipe>> BATTERY_ENCASER_SERIALIZER =
+            SERIALIZERS.register("battery_encaser", BatteryEncaserRecipe.Serializer::new);
+
+    public static final DeferredHolder<RecipeType<?>, RecipeType<BatteryEncaserRecipe>> BATTERY_ENCASER_TYPE =
+            TYPES.register("battery_encaser", () -> new RecipeType<BatteryEncaserRecipe>() {
+                @Override
+                public String toString() {
+                    return "battery_encaser";
                 }
             });
 

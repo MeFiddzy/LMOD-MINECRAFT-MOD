@@ -11,7 +11,9 @@ import com.mefiddzy.lmod.item.ModItems;
 import com.mefiddzy.lmod.potion.ModPotions;
 import com.mefiddzy.lmod.recipe.ModRecipes;
 import com.mefiddzy.lmod.screen.ModMenuTypes;
-import com.mefiddzy.lmod.screen.custom.PlateApplierScreen;
+import com.mefiddzy.lmod.screen.custom.battery_encaser.BatteryEncaserMenu;
+import com.mefiddzy.lmod.screen.custom.battery_encaser.BatteryEncaserScreen;
+import com.mefiddzy.lmod.screen.custom.plate_applier.PlateApplierScreen;
 import com.mefiddzy.lmod.sounds.ModSounds;
 import com.mefiddzy.lmod.util.ModItemProp;
 import com.mefiddzy.lmod.util.component.ModDataComp;
@@ -109,6 +111,7 @@ public class LMod
         @SubscribeEvent
         public static void regScreens(RegisterMenuScreensEvent e) {
             e.register(ModMenuTypes.PLATE_APPLIER_MENU.get(), PlateApplierScreen::new);
+            e.register(ModMenuTypes.BATTERY_ENCASER_MENU.get(), BatteryEncaserScreen::new);
         }
 
     }

@@ -2,19 +2,14 @@ package com.mefiddzy.lmod.block.custom;
 
 import com.mefiddzy.lmod.block.entity.ModBlockEntities;
 import com.mefiddzy.lmod.block.entity.PlateApplierBlockEntity;
-import com.mefiddzy.lmod.screen.custom.PlateApplierMenu;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuConstructor;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -60,7 +55,6 @@ public class PlateApplierBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        System.out.println("block entity");
         if (level.isClientSide())
             return InteractionResult.SUCCESS;
         if (level.getBlockEntity(pos) instanceof PlateApplierBlockEntity plbo) {

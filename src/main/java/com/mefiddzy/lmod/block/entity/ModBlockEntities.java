@@ -2,7 +2,7 @@ package com.mefiddzy.lmod.block.entity;
 
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.ModBlocks;
-import com.mefiddzy.lmod.screen.custom.PlateApplierMenu;
+import com.mefiddzy.lmod.screen.custom.plate_applier.PlateApplierMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -25,6 +25,10 @@ public class ModBlockEntities extends BlockEntity implements MenuProvider {
     public static final Supplier<BlockEntityType<PlateApplierBlockEntity>> PLATE_APPLIER_BE = BLOCK_ENTITIES.register("plate_applier_be", () -> BlockEntityType.Builder.of(
             PlateApplierBlockEntity::new, ModBlocks.PLATE_APPLIER.get()).build(null));
 
+    public static final Supplier<BlockEntityType<BatteryEncaserBlockEntity>> BATTERY_ENCASER_BE = BLOCK_ENTITIES.register("battery_encaser_be", () -> BlockEntityType.Builder.of(
+            BatteryEncaserBlockEntity::new, ModBlocks.BATTERY_ENCASER.get()).build(null));
+
+
     public ModBlockEntities(BlockEntityType<?> type, BlockPos pos, BlockState blockState) {
         super(type, pos, blockState);
     }
@@ -35,7 +39,7 @@ public class ModBlockEntities extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("lmod.block.plate_applier");
+        return Component.literal("Plate Applier");
     }
 
     @Override

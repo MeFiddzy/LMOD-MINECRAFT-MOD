@@ -2,6 +2,7 @@ package com.mefiddzy.lmod.block;
 
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.custom.BatteryBlock;
+import com.mefiddzy.lmod.block.custom.BatteryEncaserBlock;
 import com.mefiddzy.lmod.block.custom.PermanentEmpowererBlock;
 import com.mefiddzy.lmod.block.custom.PlateApplierBlock;
 import com.mefiddzy.lmod.item.ModItems;
@@ -72,7 +73,7 @@ public class ModBlocks {
             () -> new PlateApplierBlock(BlockBehaviour.Properties.of()
                     .strength(4.5f)
                     .requiresCorrectToolForDrops()
-                    .noCollission()
+                    .noOcclusion()
                     .sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> DURACELL_BATTERY_PACK = regB("duracell_battery_pack",
@@ -80,6 +81,13 @@ public class ModBlocks {
                     .strength(3f)
                     .sound(SoundType.METAL),
                     4));
+
+    public static final DeferredBlock<Block> BATTERY_ENCASER = regB("battery_encaser",
+            () -> new BatteryEncaserBlock(BlockBehaviour.Properties.of()
+                    .strength(4.5f)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
 
 
     private static <T extends Block> DeferredBlock<T> regB(String name, Supplier<T> block) {

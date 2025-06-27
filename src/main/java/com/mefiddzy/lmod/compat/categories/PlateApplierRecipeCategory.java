@@ -1,8 +1,8 @@
-package com.mefiddzy.lmod.compat;
+package com.mefiddzy.lmod.compat.categories;
 
 import com.mefiddzy.lmod.LMod;
 import com.mefiddzy.lmod.block.ModBlocks;
-import com.mefiddzy.lmod.recipe.PlateApplierRecipe;
+import com.mefiddzy.lmod.recipe.custom.plate_applier.PlateApplierRecipe;
 import com.mefiddzy.lmod.util.ModTags;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;

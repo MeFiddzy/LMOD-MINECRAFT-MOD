@@ -1,24 +1,24 @@
-package com.mefiddzy.lmod.screen.custom;
+package com.mefiddzy.lmod.screen.custom.battery_encaser;
 
 import com.mefiddzy.lmod.LMod;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class PlateApplierScreen extends AbstractContainerScreen<PlateApplierMenu> {
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "textures/gui/plate_applier_gui.png");
+public class BatteryEncaserScreen extends AbstractContainerScreen<BatteryEncaserMenu> {
 
-    public PlateApplierScreen(PlateApplierMenu menu, Inventory playerInventory, Component title) {
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(LMod.MOD_ID, "textures/gui/battery_encaser_gui.png");
+
+    public BatteryEncaserScreen(BatteryEncaserMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
     }
 
     @Override
-    protected void renderBg(GuiGraphics guiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
+    protected void renderBg(GuiGraphics guiGraphics, float v, int i, int i1) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
@@ -28,7 +28,6 @@ public class PlateApplierScreen extends AbstractContainerScreen<PlateApplierMenu
 
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
     }
-
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
@@ -42,5 +41,4 @@ public class PlateApplierScreen extends AbstractContainerScreen<PlateApplierMenu
         guiGraphics.drawString(this.font, this.title, 60, 6, 0x404040, false);
         guiGraphics.drawString(this.font, this.playerInventoryTitle, 8, this.imageHeight - 94, 0x404040, false);
     }
-
 }

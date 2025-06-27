@@ -47,6 +47,7 @@ public class ModCreaiveModTabs {
                 output.accept(ModBlocks.ENPOWERMENT_POWDER_BLOCK);
                 output.accept(ModBlocks.PERMA_EMPOWERER);
                 output.accept(ModBlocks.ENPOWERED_GOLD_BLOCK);
+                output.accept(ModBlocks.BATTERY_ENCASER);
                 output.accept(ModBlocks.PLATE_APPLIER);
             })
             .build());

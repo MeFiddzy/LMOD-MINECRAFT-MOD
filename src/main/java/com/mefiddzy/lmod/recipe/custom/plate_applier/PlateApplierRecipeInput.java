@@ -1,4 +1,4 @@
-package com.mefiddzy.lmod.recipe;
+package com.mefiddzy.lmod.recipe.custom.plate_applier;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeInput;

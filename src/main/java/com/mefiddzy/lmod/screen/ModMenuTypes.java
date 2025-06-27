@@ -1,7 +1,8 @@
 package com.mefiddzy.lmod.screen;
 
 import com.mefiddzy.lmod.LMod;
-import com.mefiddzy.lmod.screen.custom.PlateApplierMenu;
+import com.mefiddzy.lmod.screen.custom.battery_encaser.BatteryEncaserMenu;
+import com.mefiddzy.lmod.screen.custom.plate_applier.PlateApplierMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -16,6 +17,9 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<PlateApplierMenu>> PLATE_APPLIER_MENU =
             regMenType("plate_applier_menu", PlateApplierMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<BatteryEncaserMenu>> BATTERY_ENCASER_MENU =
+            regMenType("battery_encaser_menu", BatteryEncaserMenu::new);
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> regMenType(String name, IContainerFactory factory) {
         return MENUS.register(name, () -> IMenuTypeExtension.create(factory));

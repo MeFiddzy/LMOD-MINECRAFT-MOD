@@ -1,0 +1,13 @@
+{
+  "type": "lmod:battery_encaser",
+  "input1": {
+    "item": "minecraft:iron_ingot"
+  },
+  "input2": {
+    "item": "minecraft:coal"
+  },
+  "result": {
+    "id": "lmod:duracell_battery",
+    "count": 1
+  }
+}

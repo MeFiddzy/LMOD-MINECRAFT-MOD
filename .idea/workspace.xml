@@ -5,50 +5,339 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="180ea591-297b-4ee9-bb42-a1fe5660bcf6" name="Changes" comment="E">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/custom/BatteryBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/InfoCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/JEILModPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/PlateApplierRecipeCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/InfoRecipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/ModRecipes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/PlateApplierRecipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/PlateApplierRecipeInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_axe_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_boots_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_chestplate_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_helmet_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_hoe_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_leggings_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_pickaxe_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_shovel_plate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/enpowered_gold_sword_plate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/284f6d33e6a9788c40c37204c08dfbad5d2bd0d4" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/284f6d33e6a9788c40c37204c08dfbad5d2bd0d4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/custom/BatteryEncaserBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/entity/BatteryEncaserBlockEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/categories/fake/BedrockingRecipeCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/categories/fake/EnpoweringRecipeCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/custom/battery_encaser/BatteryEncaserRecipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/custom/battery_encaser/BatteryEncaserRecipeInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/custom/fake/FakeInOutRecipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/battery_encaser/BatteryEncaserMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/battery_encaser/BatteryEncaserScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/lmod/recipe/duracell_battery_encased.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/LMod$ModClientModEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/LMod$ModClientModEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/LMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/LMod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/ModBlocks.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/ModBlocks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/custom/PlateApplierBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/custom/PlateApplierBlock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/entity/ModBlockEntities.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/entity/ModBlockEntities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/entity/PlateApplierBlockEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/block/entity/PlateApplierBlockEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/compat/JEILModPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/compat/JEILModPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/compat/PlateApplierRecipeCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/datagen/ModBlockLootTableProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/datagen/ModBlockLootTableProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/item/ModCreaiveModTabs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/item/ModCreaiveModTabs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/recipe/ModRecipes$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/recipe/ModRecipes$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/recipe/ModRecipes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/recipe/ModRecipes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/recipe/PlateApplierRecipe$Serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/recipe/PlateApplierRecipe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/recipe/PlateApplierRecipeInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/screen/ModMenuTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/screen/ModMenuTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/screen/custom/PlateApplierMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/screen/custom/PlateApplierMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/mefiddzy/lmod/screen/custom/PlateApplierScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/modMetadata/META-INF/neoforge.mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/modMetadata/META-INF/neoforge.mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/artifacts/neoforge-21.1.77-minecraft-merged.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/artifacts/neoforge-21.1.77-minecraft-merged.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/artifacts/neoforge-21.1.77-minecraft-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/artifacts/neoforge-21.1.77-minecraft-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/artifacts/neoforge-21.1.77-minecraft.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/artifacts/neoforge-21.1.77-minecraft.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/clientLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/clientLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/clientLog4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/clientLog4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/clientRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/clientRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/clientRunVmArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/clientRunVmArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/dataLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/dataLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/dataLog4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/dataLog4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/dataRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/dataRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/dataRunVmArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/dataRunVmArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/gameTestServerLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/gameTestServerLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/gameTestServerLog4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/gameTestServerLog4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/gameTestServerRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/gameTestServerRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/gameTestServerRunVmArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/gameTestServerRunVmArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/minecraft_assets.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/minecraft_assets.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/nfrt_artifact_manifest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/nfrt_artifact_manifest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/serverLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/serverLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/serverLog4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/serverLog4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/serverRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/serverRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/serverRunVmArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/serverRunVmArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/.cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/.cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/META-INF/neoforge.mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/neoforge.mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/deepslate_pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/deepslate_pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/duracell_battery_pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/duracell_battery_pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/enpowered_gold_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/enpowered_gold_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/enpowered_powder_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/enpowered_powder_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/perma_empowerer.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/perma_empowerer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/pink_diamond_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/pink_diamond_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/polished_hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/blockstates/polished_hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/deepslate_pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/deepslate_pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/duracell_battery_pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/duracell_battery_pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/enpowered_gold_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/enpowered_gold_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/enpowered_powder_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/enpowered_powder_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/perma_empowerer.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/perma_empowerer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/pink_diamond_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/pink_diamond_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/polished_hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/block/polished_hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/an_enigmatic_encounter_music_disc.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/an_enigmatic_encounter_music_disc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/battery_receiver.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/battery_receiver.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/deepslate_pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/deepslate_pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/duracell.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/duracell.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/duracell_battery_pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/duracell_battery_pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_axe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_axe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_amethyst_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_amethyst_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_copper_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_copper_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_diamond_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_diamond_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_emerald_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_emerald_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_gold_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_gold_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_iron_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_iron_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_lapis_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_lapis_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_netherite_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_netherite_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_quartz_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_quartz_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_redstone_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_boots_redstone_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_amethyst_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_amethyst_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_copper_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_copper_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_diamond_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_diamond_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_emerald_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_emerald_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_gold_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_gold_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_iron_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_iron_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_lapis_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_lapis_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_netherite_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_netherite_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_quartz_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_quartz_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_redstone_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_chestplate_redstone_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_heart.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_heart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_amethyst_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_amethyst_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_copper_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_copper_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_diamond_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_diamond_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_emerald_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_emerald_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_gold_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_gold_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_iron_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_iron_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_lapis_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_lapis_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_netherite_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_netherite_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_quartz_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_quartz_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_redstone_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_helmet_redstone_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_hoe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_hoe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_ingot.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_ingot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_amethyst_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_amethyst_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_copper_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_copper_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_diamond_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_diamond_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_emerald_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_emerald_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_gold_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_gold_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_iron_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_iron_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_lapis_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_lapis_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_netherite_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_netherite_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_quartz_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_quartz_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_redstone_trim.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_leggings_redstone_trim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_pickaxe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_shovel.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_shovel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_stick.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_stick.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_sword.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_gold_sword.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_powder_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowered_powder_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowerment_powder.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/enpowerment_powder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/perma_empowerer.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/perma_empowerer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/pink_diamond.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/pink_diamond.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/pink_diamond_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/pink_diamond_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/polished_hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/polished_hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/tough_powder.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/models/item/tough_powder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/textures/item/dust_enpowerer.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/textures/item/dust_enpowerer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/lmod/textures/item/dust_enpowerer_broken.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/lmod/textures/item/dust_enpowerer_broken.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/an_enigmatic_encounter_music_disc.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/an_enigmatic_encounter_music_disc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/battery_receiver.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/battery_receiver.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/duracell_battery_pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/duracell_battery_pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/dust_enpowerer.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/dust_enpowerer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_axe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_axe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_boots.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_boots.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_chestplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_chestplate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_helmet.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_helmet.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_hoe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_hoe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_ingot.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_ingot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_leggings.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_leggings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_pickaxe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_shovel.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_shovel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_stick.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_stick.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_sword.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_gold_sword.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_powder_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowered_powder_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowred_gold.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/enpowred_gold.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/killstreak_sword.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/killstreak_sword.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/perma_empowerer.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/perma_empowerer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/pink_diamond_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/pink_diamond_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/plate_applier.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/advancement/recipes/misc/plate_applier.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/enchantment/disc_hunter.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/enchantment/disc_hunter.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/enchantment/guardian_angel.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/enchantment/guardian_angel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/enchantment/life_leech.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/enchantment/life_leech.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/deepslate_pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/deepslate_pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/duracell_battery_pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/duracell_battery_pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/enpowered_gold_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/enpowered_gold_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/enpowered_powder_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/enpowered_powder_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/pink_diamond_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/pink_diamond_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/pink_diamond_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/pink_diamond_ore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/plate_applier.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/plate_applier.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/polished_hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/loot_table/blocks/polished_hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/neoforge/biome_modifier/add_hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/neoforge/biome_modifier/add_hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/neoforge/biome_modifier/add_pink_diamond.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/neoforge/biome_modifier/add_pink_diamond.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/neoforge/biome_modifier/nether_add_hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/neoforge/biome_modifier/nether_add_hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/an_enigmatic_encounter_music_disc.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/an_enigmatic_encounter_music_disc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/battery_receiver.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/battery_receiver.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/duracell_battery_pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/duracell_battery_pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/dust_enpowerer.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/dust_enpowerer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_axe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_axe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_boots.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_boots.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_chestplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_chestplate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_helmet.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_helmet.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_hoe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_hoe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_ingot.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_ingot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_leggings.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_leggings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_pickaxe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_shovel.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_shovel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_stick.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_stick.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_sword.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_gold_sword.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_powder_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowered_powder_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowred_gold.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/enpowred_gold.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/killstreak_sword.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/killstreak_sword.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/perma_empowerer.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/perma_empowerer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/pink_diamond_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/pink_diamond_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/plate_applier.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/recipe/plate_applier.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/block/incorrect_for_enpowered_gold_tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/block/incorrect_for_enpowered_gold_tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/block/needs_enpowered_gold_tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/block/needs_enpowered_gold_tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/block/ore_collector_drop_blocks.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/block/ore_collector_drop_blocks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/item/batteries.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/item/batteries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/item/possible_for_ore_collector.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/tags/item/possible_for_ore_collector.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/trim_material/enpowred_gold.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/trim_material/enpowred_gold.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/configured_feature/hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/configured_feature/hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/configured_feature/nether_hard_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/configured_feature/nether_hard_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/configured_feature/pink_diamond.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/configured_feature/pink_diamond.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/placed_feature/hard_stone_placed.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/placed_feature/hard_stone_placed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/placed_feature/nether_hard_stone_placed.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/placed_feature/nether_hard_stone_placed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/placed_feature/pink_diamond_key.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/lmod/worldgen/placed_feature/pink_diamond_key.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/duracell_from_blasting_iron_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/duracell_from_blasting_iron_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/duracell_from_smelting_iron_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/duracell_from_smelting_iron_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/enpowered_gold_ingot_from_unpacking.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/enpowered_gold_ingot_from_unpacking.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/enpowerment_poweder_from_unpacking.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/enpowerment_poweder_from_unpacking.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/pink_diamond_from_unpacking.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/pink_diamond_from_unpacking.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/polished_hard_stone_from_hard_stone_stonecutting.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/advancement/recipes/misc/polished_hard_stone_from_hard_stone_stonecutting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/duracell_from_blasting_iron_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/duracell_from_blasting_iron_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/duracell_from_smelting_iron_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/duracell_from_smelting_iron_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/enpowered_gold_ingot_from_unpacking.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/enpowered_gold_ingot_from_unpacking.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/enpowerment_poweder_from_unpacking.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/enpowerment_poweder_from_unpacking.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/pink_diamond_from_unpacking.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/pink_diamond_from_unpacking.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/polished_hard_stone_from_hard_stone_stonecutting.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/recipe/polished_hard_stone_from_hard_stone_stonecutting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/mineable/hoe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/mineable/hoe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/mineable/pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/mineable/pickaxe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/needs_diamond_tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/needs_diamond_tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/needs_iron_tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/block/needs_iron_tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/axes.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/axes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/hoes.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/hoes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/pickaxes.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/pickaxes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/shovels.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/shovels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/swords.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/swords.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/trim_materials.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/trim_materials.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/trimmable_armor.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/item/trimmable_armor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/JEILModPlugin.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PlateApplierRecipeCategory.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/jei/recipe-category-sort-order.ini" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/jei/recipe-category-sort-order.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-1.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-10.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-10.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-11.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-11.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-12.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-12.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-13.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-13.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-14.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-14.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-15.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-15.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-16.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-16.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-17.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-17.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-18.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-18.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-19.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-19.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-20.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-20.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-21.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-21.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-22.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-22.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-23.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-23.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-24.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-24.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-25.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-25.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-26.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-26.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-27.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-27.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-28.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-28.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-29.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-29.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-6.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-7.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-7.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-8.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-8.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-06-22-9.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-06-22-9.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/random_sequences.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/poi/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/poi/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/poi/r.0.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/poi/r.0.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/9fb1092f32d4fcbf9e061ffd718d4ec689c6c95e" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/9fb1092f32d4fcbf9e061ffd718d4ec689c6c95e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/b483a438472ca86aba01e4baaa7a09e6a290974a" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/b483a438472ca86aba01e4baaa7a09e6a290974a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/bf057416b1c83715ab8603ff2ecc5a04f3b4090e" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/bf057416b1c83715ab8603ff2ecc5a04f3b4090e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/.cache/e1f9b6f46e55fe0e93ba6062a6a4e152b4614195" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/.cache/e1f9b6f46e55fe0e93ba6062a6a4e152b4614195" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/data/lmod/recipe/enpowered_gold_ingot.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/data/lmod/recipe/enpowered_gold_ingot.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/mineable/pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/mineable/pickaxe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/needs_iron_tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/resources/data/minecraft/tags/block/needs_iron_tool.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/LMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/LMod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/ModBlocks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/custom/PlateApplierBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/custom/PlateApplierBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/entity/ModBlockEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/entity/ModBlockEntities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/entity/PlateApplierBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/block/entity/PlateApplierBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/InfoCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/JEILModPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/JEILModPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/PlateApplierRecipeCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/compat/categories/PlateApplierRecipeCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockLootTableProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockLootTableProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockTagProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockTagProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockstateProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModBlockstateProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemModelProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemModelProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemTagProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModItemTagProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModRecipeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/datagen/ModRecipeProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/events/ModEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/events/ModEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModCreaiveModTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModCreaiveModTabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/item/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/InfoRecipe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/ModRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/ModRecipes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/PlateApplierRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/custom/plate_applier/PlateApplierRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/PlateApplierRecipeInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/recipe/custom/plate_applier/PlateApplierRecipeInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/ModMenuTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/ModMenuTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/plate_applier/PlateApplierMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/PlateApplierScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mefiddzy/lmod/screen/custom/plate_applier/PlateApplierScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/lmod/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/lmod/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/lmod/textures/item/dust_enpowerer.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/lmod/textures/item/dust_enpowerer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/lmod/textures/item/dust_enpowerer_broken.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/lmod/textures/item/dust_enpowerer_broken.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +357,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LMOD-MINECRAFT-MOD" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LMOD-MINECRAFT-MOD" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LMOD-MINECRAFT-MOD" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -92,12 +397,12 @@
     &quot;assignee&quot;: &quot;MeFiddzy&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MeFiddzy/LMOD.git&quot;,
-    &quot;accountId&quot;: &quot;80730fe5-dccc-4f6c-be93-95d5d6e72fde&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MeFiddzy/LMOD-MINECRAFT-MOD.git",
+    "accountId": "a02372a8-5165-464a-a7b1-eb6863a0255d"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -106,23 +411,27 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.LMOD [:net.neoforged.devlaunch.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/LMOD/src/main/resources/data/lmod/recipe&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.LMOD [:net.neoforged.devlaunch.Main.main()].executor": "Run",
+    "Gradle.LMOD-MINECRAFT-MOD [:net.neoforged.devlaunch.Main.main()].executor": "Run",
+    "Gradle.LMOD-MINECRAFT-MOD [build].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Minecraft MOds/LMOD-MINECRAFT-MOD/src/main/resources/data/lmod/recipe",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Minecraft MOds\LMOD-MINECRAFT-MOD\src\main\resources\data\lmod\recipe" />
+      <recent name="D:\Minecraft MOds\LMOD-MINECRAFT-MOD\src\main\java\com\mefiddzy\lmod\recipe\custom" />
       <recent name="D:\Java\LMOD\src\main\resources\data\lmod\recipe" />
       <recent name="D:\Java\LMOD\run\mods" />
       <recent name="D:\Java\LMOD\src\main\resources\data\lmod\recipe\plate_applier" />
@@ -130,13 +439,17 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java\LMOD\src\main\resources\data\lmod\recipes" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mefiddzy.lmod.compat.categories.fake" />
+      <recent name="com.mefiddzy.lmod.compat" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
-      <module name="LMOD.main" />
-      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\clientRunProgramArgs.txt" />
-      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\clientRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <module name="LMOD-MINECRAFT-MOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\clientRunProgramArgs.txt&quot;" />
+      <option name="VM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\clientRunVmArgs.txt&quot; &quot;-Dfml.modFolders=lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\classes\\java\\main;lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\resources\\main&quot;" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,9 +457,9 @@
     </configuration>
     <configuration name="Data" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
-      <module name="LMOD.main" />
-      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\dataRunProgramArgs.txt" />
-      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\dataRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <module name="LMOD-MINECRAFT-MOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\dataRunProgramArgs.txt&quot;" />
+      <option name="VM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\dataRunVmArgs.txt&quot; &quot;-Dfml.modFolders=lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\classes\\java\\main;lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\resources\\main&quot;" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,9 +467,9 @@
     </configuration>
     <configuration name="GameTestServer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
-      <module name="LMOD.main" />
-      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\gameTestServerRunProgramArgs.txt" />
-      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\gameTestServerRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <module name="LMOD-MINECRAFT-MOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\gameTestServerRunProgramArgs.txt&quot;" />
+      <option name="VM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\gameTestServerRunVmArgs.txt&quot; &quot;-Dfml.modFolders=lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\classes\\java\\main;lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\resources\\main&quot;" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,13 +477,35 @@
     </configuration>
     <configuration name="Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
-      <module name="LMOD.main" />
-      <option name="PROGRAM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\serverRunProgramArgs.txt" />
-      <option name="VM_PARAMETERS" value="@D:\\Java\\LMOD\\build\\moddev\\serverRunVmArgs.txt -Dfml.modFolders=lmod%%D:\\Java\\LMOD\\build\\classes\\java\\main;lmod%%D:\\Java\\LMOD\\build\\resources\\main" />
+      <module name="LMOD-MINECRAFT-MOD.main" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\serverRunProgramArgs.txt&quot;" />
+      <option name="VM_PARAMETERS" value="&quot;@D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\moddev\\serverRunVmArgs.txt&quot; &quot;-Dfml.modFolders=lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\classes\\java\\main;lmod%%D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\build\\resources\\main&quot;" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="LMOD-MINECRAFT-MOD [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -181,6 +516,11 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.LMOD-MINECRAFT-MOD [build]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

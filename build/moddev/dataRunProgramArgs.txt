@@ -7,7 +7,7 @@ forgedatauserdev
 --assetIndex
 17
 --assetsDir
-C:\\Users\\paul\\.gradle\\caches\\neoformruntime\\assets
+C:\\Users\\Paul\\.gradle\\caches\\neoformruntime\\assets
 --gameDir
 .
 --fml.neoForgeVersion
@@ -24,6 +24,6 @@ C:\\Users\\paul\\.gradle\\caches\\neoformruntime\\assets
 lmod
 --all
 --output
-D:\\Java\\LMOD\\src\\generated\\resources
+"D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\src\\generated\\resources"
 --existing
-D:\\Java\\LMOD\\src\\main\\resources
+"D:\\Minecraft MOds\\LMOD-MINECRAFT-MOD\\src\\main\\resources"
