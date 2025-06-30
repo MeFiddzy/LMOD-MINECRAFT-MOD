@@ -18,6 +18,7 @@ import com.mefiddzy.lmod.sounds.ModSounds;
 import com.mefiddzy.lmod.util.ModItemProp;
 import com.mefiddzy.lmod.util.component.ModDataComp;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -91,6 +92,9 @@ public class LMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.POLISHED_HARD_STONE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

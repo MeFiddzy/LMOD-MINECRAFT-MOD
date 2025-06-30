@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LMOD-MINECRAFT-MOD.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LMOD-MINECRAFT-MOD.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LMOD.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LMOD.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mefiddzy.lmod.LMOD-MINECRAFT-MOD.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mefiddzy.lmod.LMOD-MINECRAFT-MOD.main.iml" />
     </modules>
   </component>
 </project>

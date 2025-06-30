@@ -14,9 +14,9 @@ import java.util.function.Supplier;
 public class ModCreaiveModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MOD_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, LMod.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> TECHICAL_ITEMS = CREATIVE_MOD_TABS.register("technical_items", () -> CreativeModeTab.builder()
+    public static final Supplier<CreativeModeTab> TECHICAL_ITEMS = CREATIVE_MOD_TABS.register("lmod", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.ENPOWERED_GOLD_INGOT.get()))
-            .title(Component.translatable("creativetab.lmod.technical_items"))
+            .title(Component.translatable("creativetab.lmod"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModItems.ENPOWERED_GOLD_INGOT);
                 output.accept(ModItems.ENPOWERMENT_POWDER);
@@ -38,6 +38,7 @@ public class ModCreaiveModTabs {
                 output.accept(ModItems.ENPOWERED_GOLD_PLATE);
                 output.accept(ModItems.BATTERY_RECEIVER);
                 output.accept(ModItems.ENPOWERED_GOLD_HEART);
+                output.accept(ModItems.AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC);
 
                 output.accept(ModBlocks.HARD_STONE);
                 output.accept(ModBlocks.DURACELL_BATTERY_PACK);
@@ -49,15 +50,6 @@ public class ModCreaiveModTabs {
                 output.accept(ModBlocks.ENPOWERED_GOLD_BLOCK);
                 output.accept(ModBlocks.BATTERY_ENCASER);
                 output.accept(ModBlocks.PLATE_APPLIER);
-            })
-            .build());
-
-    public static final Supplier<CreativeModeTab> BUILDING_BLOCKS = CREATIVE_MOD_TABS.register("building_blocks", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModBlocks.POLISHED_HARD_STONE.get()))
-            .title(Component.translatable("creativetab.lmod.building_blocks"))
-            .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModBlocks.POLISHED_HARD_STONE.get());
-                output.accept(ModItems.AN_ENIGMATIC_ENCOUNTER_MUSIC_DISC);
             })
             .build());
 

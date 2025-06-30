@@ -37,8 +37,7 @@
   "block.lmod.plate_applier": "Plate Applier",
   "block.lmod.duracell_battery_pack": "Duracell Battery Pack",
 
-  "creativetab.lmod.building_blocks": "LMod - Building Blocks",
-  "creativetab.lmod.technical_items": "LMod - Technical Items",
+  "creativetab.lmod": "Technical Items",
 
   "tooltip.lmod.noshift": "Hold down§6 SHIFT KEY§f for more information.",
   "tooltip.lmod.block.permanent_empower": "Right click the block while holding the tough dust \nitem to convert it into a powerful form.\nI wonder what happens if I step on this block...",
